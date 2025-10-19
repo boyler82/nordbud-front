@@ -17,8 +17,8 @@ export default function Projects() {
   const { t } = useTranslation()
 
   // startowo 40 px/s; możesz zmienić np. na 60
-  const { containerRef, setSpeed, speed, paused, setPaused } =
-    useMarquee<HTMLDivElement>({ pxPerSec: 40, pauseOnHover: true, draggable: true })
+const { containerRef, setSpeed, speed, paused, setPaused } =
+  useMarquee<HTMLDivElement>({ pxPerSec: 40, draggable: true })
 
   // duplikujemy listę, by mieć płynną pętlę bez „skoku”
   const items = [...data, ...data]
