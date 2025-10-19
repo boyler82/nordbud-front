@@ -1,0 +1,47 @@
+{
+  "nav": { 
+  "start": "Start", 
+  "offer": "Oferta", 
+  "projects": "Realizacje",
+  "contact": "Kontakt", 
+  "lang": "Język" },
+  "hero": {
+    "title": "Solidne realizacje budowlane dla firm i domów",
+    "subtitle": "Nordbud – wykonawstwo, remonty, instalacje. Terminowo, rzetelnie, bez zbędnych formalności.",
+    "ctaOffer": "Zobacz ofertę",
+    "ctaQuote": "Umów wycenę"
+  },
+  "offer": {
+    "items": ["Generalne wykonawstwo","Remonty i wykończenia","Elewacje i dachy","Instalacje i serwis"],
+    "heading": "Wybrane realizacje"
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "emailText": "Napisz do nas:",
+    "name": "Imię i nazwisko",
+    "email": "E-mail",
+    "phone": "Telefon (opcjonalnie)",
+    "message": "Twoja wiadomość",
+    "consent": "Wyrażam zgodę na przetwarzanie moich danych w celu kontaktu w sprawie zapytania.",
+    "send": "Wyślij",
+    "sent": "Dziękujemy! Sprawdzimy i wrócimy z odpowiedzią.",
+    "error": "Coś poszło nie tak. Spróbuj ponownie lub napisz na biuro@nordbud.pl."
+  },
+  "footer": { "rights": "Wszelkie prawa zastrzeżone." 
+},
+    "projects": {
+    "heading": "Wybrane realizacje",
+    "speedLabel": "Obecna prędkość",
+    "slower": "Wolniej",
+    "faster": "Szybciej",
+    "pause": "Pauza",
+    "start": "Start",
+    "resume": "Wznów",
+    "viewAria": "Zobacz: {{title}}",
+    "titles": {
+      "hala-magazynowa-gdansk": "Hala magazynowa – Gdańsk",
+      "dom-jednorodzinny-gdynia": "Dom jednorodzinny – Gdynia",
+      "remont-biura-sopot": "Remont biura – Sopot"
+    }
+  }
+}

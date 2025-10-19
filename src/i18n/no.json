@@ -1,0 +1,48 @@
+{
+  "nav": { 
+    "start": "Hjem", 
+    "offer": "Tilbud",
+    "projects": "Prosjekter",
+    "contact": "Kontakt", 
+    "lang": "Språk" },
+  "hero": {
+    "title": "Pålitelige byggeprosjekter for bedrifter og boliger",
+    "subtitle": "Nordbud — utførelse, oppussing, installasjoner. I tide, pålitelig, uten unødvendig papirarbeid.",
+    "ctaOffer": "Se tilbud",
+    "ctaQuote": "Be om pris"
+  },
+  "offer": {
+    "items": ["Totalentreprise","Oppussing og finish","Fasader og tak","Installasjoner og service"],
+    "heading": "Utvalgte prosjekter"
+  },
+  "contact": {
+    "heading": "Kontakt",
+    "emailText": "Skriv til oss:",
+    "name": "Fullt navn",
+    "email": "E-post",
+    "phone": "Telefon (valgfritt)",
+    "message": "Din melding",
+    "consent": "Jeg samtykker til behandling av mine data for å bli kontaktet om forespørselen.",
+    "send": "Send",
+    "sent": "Takk! Vi tar kontakt snart.",
+    "error": "Noe gikk galt. Prøv igjen eller send e-post til biuro@nordbud.pl."
+  },
+  "footer": { "rights": "Alle rettigheter reservert." },
+  
+  "projects": {
+    "heading": "Utvalgte prosjekter",
+    "speedLabel": "Aktuell hastighet",
+    "slower": "Saktere",
+    "faster": "Raskere",
+    "pause": "Pause",
+    "start": "Start",
+    "resume": "Fortsett",
+    "viewAria": "Se: {{title}}",
+    "titles": {
+      "hala-magazynowa-gdansk": "Lagerhall – Gdańsk",
+      "dom-jednorodzinny-gdynia": "Enebolig – Gdynia",
+      "remont-biura-sopot": "Kontorrenovering – Sopot"
+    }
+  }
+
+}

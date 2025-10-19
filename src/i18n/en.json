@@ -1,0 +1,48 @@
+{
+  "nav": { 
+    "start": "Home", 
+    "offer": "Offer",
+    "projects": "Projects",
+    "contact": "Contact", 
+    "lang": "Language" },
+  "hero": {
+    "title": "Reliable construction for businesses and homes",
+    "subtitle": "Nordbud — construction, renovations, installations. On time, trustworthy, hassle-free.",
+    "ctaOffer": "See offer",
+    "ctaQuote": "Request a quote"
+  },
+  "offer": {
+    "items": ["General contracting","Renovations & finishes","Facades & roofs","Installations & service"],
+    "heading": "Selected projects"
+  },
+  "contact": {
+    "heading": "Contact",
+    "emailText": "Write to us:",
+    "name": "Full name",
+    "email": "E-mail",
+    "phone": "Phone (optional)",
+    "message": "Your message",
+    "consent": "I consent to processing my data to be contacted regarding my inquiry.",
+    "send": "Send",
+    "sent": "Thank you! We'll get back to you shortly.",
+    "error": "Something went wrong. Please try again or email biuro@nordbud.pl."
+  },
+  "footer": { "rights": "All rights reserved." },
+
+  "projects": {
+    "heading": "Selected projects",
+    "speedLabel": "Current speed",
+    "slower": "Slower",
+    "faster": "Faster",
+    "pause": "Pause",
+    "start": "Start",
+    "resume": "Resume",
+    "viewAria": "View: {{title}}",
+    "titles": {
+      "hala-magazynowa-gdansk": "Warehouse hall – Gdańsk",
+      "dom-jednorodzinny-gdynia": "Single-family house – Gdynia",
+      "remont-biura-sopot": "Office renovation – Sopot"
+    }
+  }
+
+}

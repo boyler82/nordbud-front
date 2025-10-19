@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50:  #f1f8ff;
+  --color-brand-100: #e2f0ff;
+  --color-brand-200: #bfe0ff;
+  --color-brand-300: #8cc6ff;
+  --color-brand-400: #59a9ff;
+  --color-brand-500: #2a89ff;
+  --color-brand-600: #1f6ee0;
+  --color-brand-700: #1756b3;
+  --color-brand-800: #123f80;
+  --color-brand-900: #0c2a59;
+}
+
+html, body, #root { height: 100%; }
+body { -webkit-font-smoothing: antialiased; }
+/* ukrycie paska przewijania dla karuzeli (opcjonalne) */
+.carousel::-webkit-scrollbar { display: none; }
+.carousel { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* (opcjonalnie) ukrycie paska przewijania dla karuzeli */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
