@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="overflow-hidden rounded-2xl border shadow-sm">
           <img
             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop"
-            alt="Plac budowy — wizualizacja realizacji Nordbud"
+            alt="Plac budowy — wizualizacja realizacji Valheimbygg"
             className="aspect-[16/9] w-full object-cover"
           />
         </div>

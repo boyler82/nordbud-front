@@ -6,8 +6,12 @@ import Projects from '@/components/Projects'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import useScrollToHash from '@/hooks/useScrollToHash'
+import { useEffect } from 'react'
 
 export default function App() {
+  useEffect(() => {
+    document.title = 'Valheimbygg AS';
+  }, []);
   useScrollToHash(96) // wysokość sticky navu
   return (
     <div className="min-h-screen bg-white text-gray-900">
