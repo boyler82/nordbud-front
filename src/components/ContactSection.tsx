@@ -64,8 +64,8 @@ export default function ContactSection() {
       <h1 className="text-3xl font-bold">{t("contact.heading")}</h1>
       <p className="mt-4 text-gray-600">
         {t("contact.emailText")}{" "}
-        <a href="mailto:biuro@nordbud.pl" className="text-brand-600">
-          biuro@nordbud.pl
+        <a href="mailto:post@valheimbygg.no" className="text-brand-600">
+          post@valheimbygg.no
         </a>
       </p>
 

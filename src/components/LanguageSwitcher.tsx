@@ -3,7 +3,7 @@ import { setLang } from "@/i18n";
 
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
-  const current = i18n.resolvedLanguage?.slice(0,2) || "pl";
+  const current = i18n.resolvedLanguage?.slice(0,2) || "no";
   const btn = (lng: "pl"|"en"|"no", label: string) => (
     <button
       key={lng}
