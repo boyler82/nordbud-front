@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t py-10 text-center text-sm text-gray-500">
-      © {year} Nordbud. {t("footer.rights")}
+      © {year} Valheimbygg. {t("footer.rights")}
     </footer>
   );
 }
