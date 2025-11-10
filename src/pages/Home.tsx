@@ -15,7 +15,7 @@ export default function Home() {
             Solidne realizacje budowlane dla firm i domów
           </motion.h1>
           <p className="mt-4 text-lg text-gray-600">
-            Nordbud – wykonawstwo, remonty, instalacje. Terminowo, rzetelnie, bez zbędnych formalności.
+            Valheimbygg AS – wykonawstwo, remonty, instalacje. Terminowo, rzetelnie, bez zbędnych formalności.
           </p>
           <div className="mt-8 flex gap-3">
             <a

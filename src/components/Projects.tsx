@@ -33,27 +33,6 @@ const { containerRef, setSpeed, speed, paused, setPaused } =
           </p>
         </div>
         <div className="hidden md:flex items-center gap-2">
-          <button
-            onClick={() => setSpeed(s => Math.max(10, s - 20))}
-            className="rounded-xl border px-3 py-2 text-sm hover:bg-gray-50"
-            aria-label={t('projects.slower')!}
-          >
-            {t('projects.slower')}
-          </button>
-          <button
-            onClick={() => setSpeed(s => s + 20)}
-            className="rounded-xl border px-3 py-2 text-sm hover:bg-gray-50"
-            aria-label={t('projects.faster')!}
-          >
-            {t('projects.faster')}
-          </button>
-          <button
-            onClick={() => setPaused(p => !p)}
-            className="rounded-xl border px-3 py-2 text-sm hover:bg-gray-50"
-            aria-label={paused ? t('projects.resume')! : t('projects.pause')!}
-          >
-            {paused ? t('projects.start') : t('projects.pause')}
-          </button>
         </div>
       </div>
 
