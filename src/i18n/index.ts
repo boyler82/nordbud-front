@@ -13,7 +13,7 @@ i18n
   .init({
     resources: { pl: { translation: pl }, en: { translation: en }, no: { translation: no } },
     lng: initial,
-    fallbackLng: "pl",
+    fallbackLng: "no",
     interpolation: { escapeValue: false }
   });
 
