@@ -8,13 +8,52 @@
   "hero": {
     "title": "Pålitelige byggeprosjekter for bedrifter og boliger",
     "subtitle": "Valheimbygg AS — utførelse, oppussing, installasjoner. I tide, pålitelig, uten unødvendig papirarbeid.",
-    "ctaOffer": "Se tilbud",
+    "ctaOffer": "Våre tjenester",
     "ctaQuote": "Be om pris"
   },
+  
+
   "offer": {
-    "items": ["Totalentreprise","Oppussing og finish","Fasader og tak","Installasjoner og service"],
-    "heading": "Utvalgte prosjekter"
+    "heading": "Våre tjenester",
+    "lead": "Vi tar oss av både mindre oppdrag og komplette prosjekter – fra første befaring til ferdig levert arbeid.",
+
+    "services": {
+      "carpentry": {
+        "title": "Snekker- og tømrerarbeid",
+        "short": "Innvendig og utvendig snekkerarbeid for bolig og næring.",
+        "details": "Vi utfører innvendig arbeid, listverk, gulv, lettvegger, dører, terrasser og andre treprosjekter tilpasset bygget og dine behov."
+      },
+      "renovation": {
+        "title": "Rehabilitering og oppussing",
+        "short": "Oppgradering av eksisterende bygg, rom og flater.",
+        "details": "Total- og delvis renovering av bolig, bad, kjøkken, kontor og fellesarealer – med fokus på kvalitet, ryddighet og gode løsninger."
+      },
+      "concrete": {
+        "title": "Betong og fundament",
+        "short": "Støp av plate på mark, fundamenter og konstruksjoner.",
+        "details": "Vi leverer grunnarbeid, ringmur, betongplater og mindre støpekonstruksjoner som gir et solid fundament for videre bygging."
+      },
+      "roofFacade": {
+        "title": "Tak og fasade",
+        "short": "Trygge og energieffektive tak- og fasadeløsninger.",
+        "details": "Utskifting av kledning, etterisolering, takarbeid og utbedring av skader – slik at bygget både ser bedre ut og tåler norsk klima."
+      }
+    },
+
+    "why": {
+      "heading": "Hvorfor velge Valheimbygg?",
+      "lead": "Vi kombinerer håndverksfaglig erfaring med tydelig kommunikasjon og forutsigbar framdrift.",
+      "items": {
+        "experience": "Flere års erfaring fra små og mellomstore prosjekter i Norge.",
+        "quality": "Fokus på kvalitet i utførelse, gode materialvalg og ryddige arbeidsplasser.",
+        "communication": "Tydelig dialog gjennom hele prosjektet – du vet alltid hva som skjer.",
+        "onTime": "Vi planlegger realistisk og jobber for å levere til avtalt tid."
+      }
+    }
   },
+
+
+
   "contact": {
     "heading": "Kontakt",
     "emailText": "Skriv til oss:",
@@ -29,20 +68,29 @@
   },
   "footer": { "rights": "Alle rettigheter reservert." },
   
-  "projects": {
-    "heading": "Utvalgte prosjekter",
-    "speedLabel": "Aktuell hastighet",
-    "slower": "Saktere",
-    "faster": "Raskere",
-    "pause": "Pause",
-    "start": "Start",
-    "resume": "Fortsett",
-    "viewAria": "Se: {{title}}",
-    "titles": {
-      "hala-magazynowa-gdansk": "Lagerhall – Gdańsk",
-      "dom-jednorodzinny-gdynia": "Enebolig – Gdynia",
-      "remont-biura-sopot": "Kontorrenovering – Sopot"
+"projects": {
+  "heading": "Utvalgte prosjekter",
+  "subtitle": "Et lite utvalg av jobber vi har utført for private og bedrifter.",
+  "viewAria": "Se mer om prosjektet {{title}}",
+  "close": "Lukk",
+  "titles": {
+    "hala-magazynowa-gdansk": "Lagerhall – Gdańsk",
+    "dom-jednorodzinny-gdynia": "Enebolig – Gdynia",
+    "remont-biura-sopot": "Kontoroppussing – Sopot"
+  },
+  "details": {
+    "hala-magazynowa-gdansk": {
+      "description": "Nybygg av lagerhall med stålkonstruksjon, betonggulv og komplett fasade. Leveranse inkluderte grunnarbeid, betong og innvendig tilpasning."
+    },
+    "dom-jednorodzinny-gdynia": {
+      "description": "Moderne enebolig med høy standard innvendig, energiøkonomiske løsninger og nøkkelferdig utførelse."
+    },
+    "remont-biura-sopot": {
+      "description": "Totalrenovering av kontorlokale: nye overflater, belysning, glassvegger og tilpassede løsninger for arbeidssoner."
     }
   }
+}
+
+  
 
 }

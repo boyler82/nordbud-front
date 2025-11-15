@@ -1,129 +1,60 @@
+// src/hooks/useMarquee.ts
 import { useEffect, useRef, useState } from 'react'
 
 type Options = {
-  pxPerSec?: number      // prędkość domyślna (px/s)
-  draggable?: boolean    // przeciąganie myszką / dotykiem
+  pxPerSec?: number
 }
 
-export default function useMarquee<T extends HTMLElement>({
-  pxPerSec = 40,
-  draggable = true,
-}: Options = {}) {
-  const ref = useRef<T | null>(null)
+export default function useMarquee<T extends HTMLElement>(opts: Options = {}) {
+  const { pxPerSec = 45 } = opts // domyślnie 50 px/s
+  const containerRef = useRef<T | null>(null)
+  const [speed] = useState(pxPerSec)
 
-  const rafId = useRef<number | null>(null)
-  const lastTs = useRef<number | null>(null)
-  const halfWidth = useRef<number>(0)
-
-  const [speed, setSpeed] = useState(pxPerSec)
-  const [paused, setPaused] = useState(false)
-
-  // Refy do aktualnych wartości
-  const speedRef = useRef(speed)
-  const pausedRef = useRef(paused)
-  useEffect(() => { speedRef.current = speed }, [speed])
-  useEffect(() => { pausedRef.current = paused }, [paused])
-
-  // pętla płynnego przesuwania
   useEffect(() => {
-    const el = ref.current
+    const el = containerRef.current
     if (!el) return
 
-    const loop = (ts: number) => {
-      if (!ref.current) return
-      if (lastTs.current == null) lastTs.current = ts
-      const dt = (ts - lastTs.current) / 1000
-      lastTs.current = ts
+    let animationId: number
+    let lastTime: number | null = null
+    const paused = { current: false }
 
-      const spd = speedRef.current
-      const isPaused = pausedRef.current
+    const step = (time: number) => {
+      if (lastTime != null && !paused.current) {
+        const dt = (time - lastTime) / 1000 // sekundy
+        const delta = pxPerSec * dt
 
-      if (!isPaused && Math.abs(spd) > 0.01) {
-        ref.current.scrollLeft += spd * dt
+        // przesuwamy scrollLeft
+        el.scrollLeft += delta
 
-        // bezszwowa pętla
-        if (ref.current.scrollLeft >= halfWidth.current) {
-          ref.current.scrollLeft -= halfWidth.current
-        } else if (ref.current.scrollLeft < 0) {
-          ref.current.scrollLeft += halfWidth.current
+        const maxScroll = el.scrollWidth - el.clientWidth
+        if (maxScroll > 0 && el.scrollLeft >= maxScroll - 1) {
+          // gdy dojedziemy do końca, wracamy na początek
+          el.scrollLeft = 0
         }
       }
-
-      rafId.current = requestAnimationFrame(loop)
+      lastTime = time
+      animationId = requestAnimationFrame(step)
     }
 
-    const updateHalf = () => { halfWidth.current = Math.floor(el.scrollWidth / 2) }
-    updateHalf()
-    const ro = new ResizeObserver(updateHalf)
-    ro.observe(el)
+    animationId = requestAnimationFrame(step)
 
-    rafId.current = requestAnimationFrame(loop)
+    // pauza podczas dotyku / scrolla na mobile, żeby nie "walczyć" z użytkownikiem
+    const onDown = () => { paused.current = true }
+    const onUp = () => { paused.current = false }
+
+    el.addEventListener('pointerdown', onDown)
+    el.addEventListener('pointerup', onUp)
+    el.addEventListener('pointercancel', onUp)
+    el.addEventListener('pointerleave', onUp)
 
     return () => {
-      if (rafId.current) cancelAnimationFrame(rafId.current)
-      ro.disconnect()
-      lastTs.current = null
+      cancelAnimationFrame(animationId)
+      el.removeEventListener('pointerdown', onDown)
+      el.removeEventListener('pointerup', onUp)
+      el.removeEventListener('pointercancel', onUp)
+      el.removeEventListener('pointerleave', onUp)
     }
-  }, [])
+  }, [pxPerSec])
 
-  // Drag / swipe
-  useEffect(() => {
-    if (!draggable) return
-    const el = ref.current
-    if (!el) return
-
-    let isDown = false
-    let startX = 0
-    let startScroll = 0
-
-    const onDown = (e: MouseEvent | TouchEvent) => {
-      isDown = true
-      setPaused(true)
-      startX = 'touches' in e ? e.touches[0].clientX : e.clientX
-      startScroll = el.scrollLeft
-    }
-    const onMove = (e: MouseEvent | TouchEvent) => {
-      if (!isDown) return
-      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
-      const dx = clientX - startX
-      el.scrollLeft = startScroll - dx
-      if (el.scrollLeft >= halfWidth.current) el.scrollLeft -= halfWidth.current
-      if (el.scrollLeft < 0) el.scrollLeft += halfWidth.current
-    }
-    const onUp = () => {
-      isDown = false
-      setPaused(false)
-    }
-
-    el.addEventListener('mousedown', onDown)
-    el.addEventListener('mousemove', onMove)
-    window.addEventListener('mouseup', onUp)
-    el.addEventListener('touchstart', onDown, { passive: true })
-    el.addEventListener('touchmove', onMove, { passive: true })
-    el.addEventListener('touchend', onUp)
-
-    return () => {
-      el.removeEventListener('mousedown', onDown)
-      el.removeEventListener('mousemove', onMove)
-      window.removeEventListener('mouseup', onUp)
-      el.removeEventListener('touchstart', onDown)
-      el.removeEventListener('touchmove', onMove)
-      el.removeEventListener('touchend', onUp)
-    }
-  }, [draggable])
-
-  // pauza gdy karta nieaktywna
-  useEffect(() => {
-    const onVis = () => setPaused(document.hidden)
-    document.addEventListener('visibilitychange', onVis)
-    return () => document.removeEventListener('visibilitychange', onVis)
-  }, [])
-
-  return {
-    containerRef: ref,
-    paused,
-    setPaused,
-    speed,
-    setSpeed,
-  }
+  return { containerRef, speed }
 }

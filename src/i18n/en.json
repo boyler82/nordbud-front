@@ -11,10 +11,48 @@
     "ctaOffer": "See offer",
     "ctaQuote": "Request a quote"
   },
+  
   "offer": {
-    "items": ["General contracting","Renovations & finishes","Facades & roofs","Installations & service"],
-    "heading": "Selected projects"
+    "heading": "Our services",
+    "lead": "We handle both smaller jobs and complete projects – from first site visit to final delivery.",
+
+    "services": {
+      "carpentry": {
+        "title": "Carpentry & joinery",
+        "short": "Interior and exterior carpentry for homes and commercial buildings.",
+        "details": "We build internal walls, floors, decking, terraces, doors and custom woodwork adapted to your project."
+      },
+      "renovation": {
+        "title": "Renovation & refurbishment",
+        "short": "Upgrading existing buildings, rooms and surfaces.",
+        "details": "Full or partial renovation of houses, bathrooms, kitchens, offices and common areas – with focus on quality and tidy work."
+      },
+      "concrete": {
+        "title": "Concrete & foundations",
+        "short": "Slabs on ground, foundations and small concrete structures.",
+        "details": "We deliver groundwork, ring walls and concrete slabs that give a solid base for further construction."
+      },
+      "roofFacade": {
+        "title": "Roof & facade",
+        "short": "Safe and energy-efficient roof and facade solutions.",
+        "details": "Cladding replacement, insulation upgrades, roof work and repairs – so the building both looks good and withstands the Nordic climate."
+      }
+    },
+
+    "why": {
+      "heading": "Why choose Valheimbygg?",
+      "lead": "We combine hands-on experience with clear communication and predictable progress.",
+      "items": {
+        "experience": "Several years of experience from small and medium-sized projects in Norway.",
+        "quality": "Focus on quality workmanship, proper materials and tidy job sites.",
+        "communication": "Clear communication throughout the project – you always know what is happening.",
+        "onTime": "Realistic planning and a strong focus on delivering on time."
+      }
+    }
   },
+
+
+
   "contact": {
     "heading": "Contact",
     "emailText": "Write to us:",
@@ -30,19 +68,28 @@
   "footer": { "rights": "All rights reserved." },
 
   "projects": {
-    "heading": "Selected projects",
-    "speedLabel": "Current speed",
-    "slower": "Slower",
-    "faster": "Faster",
-    "pause": "Pause",
-    "start": "Start",
-    "resume": "Resume",
-    "viewAria": "View: {{title}}",
-    "titles": {
-      "hala-magazynowa-gdansk": "Warehouse hall – Gdańsk",
-      "dom-jednorodzinny-gdynia": "Single-family house – Gdynia",
-      "remont-biura-sopot": "Office renovation – Sopot"
+  "heading": "Selected Projects",
+  "subtitle": "A showcase of completed work for private clients and companies.",
+  "viewAria": "View more about the project {{title}}",
+  "close": "Close",
+
+  "titles": {
+    "hala-magazynowa-gdansk": "Warehouse Hall – Gdańsk",
+    "dom-jednorodzinny-gdynia": "Single-Family House – Gdynia",
+    "remont-biura-sopot": "Office Renovation – Sopot"
+  },
+
+  "details": {
+    "hala-magazynowa-gdansk": {
+      "description": "Construction of a warehouse hall with a steel structure, concrete flooring, and full façade finishing. The scope included groundwork, concrete works, and interior adaptation."
+    },
+    "dom-jednorodzinny-gdynia": {
+      "description": "A modern single-family house completed to a turnkey standard, featuring energy-efficient solutions and high-quality interior finishes."
+    },
+    "remont-biura-sopot": {
+      "description": "Complete renovation of an office space, including new surfaces, lighting, glass partitions, and custom-built functional work areas."
     }
   }
+}
 
 }

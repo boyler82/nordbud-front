@@ -11,10 +11,48 @@
     "ctaOffer": "Zobacz ofertę",
     "ctaQuote": "Umów wycenę"
   },
+
+
   "offer": {
-    "items": ["Generalne wykonawstwo","Remonty i wykończenia","Elewacje i dachy","Instalacje i serwis"],
-    "heading": "Wybrane realizacje"
+    "heading": "Nasze usługi",
+    "lead": "Realizujemy zarówno mniejsze zlecenia, jak i kompletne inwestycje – od pierwszej wizji po oddanie gotowej pracy.",
+
+    "services": {
+      "carpentry": {
+        "title": "Prace stolarskie i ciesielskie",
+        "short": "Zabudowy, ścianki, tarasy i wykończenia w drewnie.",
+        "details": "Wykonujemy prace wewnętrzne i zewnętrzne: podłogi, ścianki działowe, zabudowy, tarasy oraz inne elementy drewniane dopasowane do budynku."
+      },
+      "renovation": {
+        "title": "Remonty i modernizacje",
+        "short": "Odświeżanie i przebudowa istniejących pomieszczeń.",
+        "details": "Kompleksowe i częściowe remonty mieszkań, łazienek, kuchni oraz biur – z naciskiem na jakość, porządek i funkcjonalne rozwiązania."
+      },
+      "concrete": {
+        "title": "Beton i fundamenty",
+        "short": "Płyty fundamentowe, ławy i inne elementy żelbetowe.",
+        "details": "Przygotowujemy fundamenty, płyty na gruncie i inne konstrukcje betonowe będące solidną podstawą pod dalsze prace budowlane."
+      },
+      "roofFacade": {
+        "title": "Dach i elewacja",
+        "short": "Nowe pokrycia dachowe oraz odnowa elewacji.",
+        "details": "Wymiana pokrycia, docieplenia, nowa elewacja oraz naprawy – tak, aby budynek był dobrze zabezpieczony i estetyczny."
+      }
+    },
+
+    "why": {
+      "heading": "Dlaczego warto wybrać Valheimbygg?",
+      "lead": "Stawiamy na rzetelne wykonanie, dobrą komunikację i terminowe zakończenie prac.",
+      "items": {
+        "experience": "Wieloletnie doświadczenie w projektach budowlanych w Norwegii.",
+        "quality": "Dokładność wykonania, właściwe materiały i dbałość o detale.",
+        "communication": "Stały kontakt na każdym etapie – wiesz, na jakim etapie jest zlecenie.",
+        "onTime": "Realistyczne terminy i praca nastawiona na dotrzymywanie ustaleń."
+      }
+    }
   },
+
+
   "contact": {
     "heading": "Kontakt",
     "emailText": "Napisz do nas:",
@@ -30,18 +68,25 @@
   "footer": { "rights": "Wszelkie prawa zastrzeżone." 
 },
     "projects": {
-    "heading": "Wybrane realizacje",
-    "speedLabel": "Obecna prędkość",
-    "slower": "Wolniej",
-    "faster": "Szybciej",
-    "pause": "Pauza",
-    "start": "Start",
-    "resume": "Wznów",
-    "viewAria": "Zobacz: {{title}}",
-    "titles": {
-      "hala-magazynowa-gdansk": "Hala magazynowa – Gdańsk",
-      "dom-jednorodzinny-gdynia": "Dom jednorodzinny – Gdynia",
-      "remont-biura-sopot": "Remont biura – Sopot"
+  "heading": "Wybrane realizacje",
+  "subtitle": "Kilka przykładowych realizacji dla klientów prywatnych i firm.",
+  "viewAria": "Zobacz więcej o projekcie {{title}}",
+  "close": "Zamknij",
+  "titles": {
+    "hala-magazynowa-gdansk": "Hala magazynowa – Gdańsk",
+    "dom-jednorodzinny-gdynia": "Dom jednorodzinny – Gdynia",
+    "remont-biura-sopot": "Remont biura – Sopot"
+  },
+  "details": {
+    "hala-magazynowa-gdansk": {
+      "description": "Budowa hali magazynowej ze stalową konstrukcją, posadzką betonową i kompletną elewacją."
+    },
+    "dom-jednorodzinny-gdynia": {
+      "description": "Nowoczesny dom jednorodzinny pod klucz z naciskiem na energooszczędność."
+    },
+    "remont-biura-sopot": {
+      "description": "Generalny remont biura: nowe podłogi, sufity, oświetlenie i zabudowy szklane."
     }
   }
+}
 }
