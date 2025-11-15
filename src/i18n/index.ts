@@ -12,7 +12,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources: { pl: { translation: pl }, en: { translation: en }, no: { translation: no } },
-    lng: initial,
+    // lng: initial,
+    lng: "no",
     fallbackLng: "no",
     interpolation: { escapeValue: false }
   });

@@ -11,10 +11,20 @@
   --color-brand-700: #1756b3;
   --color-brand-800: #123f80;
   --color-brand-900: #0c2a59;
+
+    /* Nowe zmienne dla gradientów */
+  --color-bg-gradient-1: linear-gradient(to bottom, #f5f5f5, #d40c66);
+  --color-bg-gradient-2: linear-gradient(to bottom, #ffffff, #e2e8ff);
+  --color-bg-gradient-3: linear-gradient(
+  to bottom,
+  #f5f5f5,   /* jasna szarość */
+  #c3d1ff,   /* jasny niebieski przejściowy */
+  #1e3a8a    /* ciemny niebieski (Tailwind blue-900) */
+);
 }
 
 html, body, #root { height: 100%; }
-body { -webkit-font-smoothing: antialiased; }
+body { -webkit-font-smoothing: antialiased;}
 /* ukrycie paska przewijania dla karuzeli (opcjonalne) */
 .carousel::-webkit-scrollbar { display: none; }
 .carousel { -ms-overflow-style: none; scrollbar-width: none; }
@@ -22,3 +32,19 @@ body { -webkit-font-smoothing: antialiased; }
 /* (opcjonalnie) ukrycie paska przewijania dla karuzeli */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+section {
+  background: transparent !important;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  /* Na wszelki wypadek, gdybyś gdzieś miał .hero-buttons */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

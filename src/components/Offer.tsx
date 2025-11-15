@@ -5,7 +5,10 @@ export default function Offer() {
   const items = t('offer.items', { returnObjects: true }) as string[];
 
   return (
-    <section id="oferta" className="mx-auto max-w-6xl px-4 py-12">
+      <section
+      id="oferta"
+      className="mx-auto max-w-6xl px-4 py-10 sm:py-12"
+      >
       <h2 className="text-2xl font-bold mb-6">{t('offer.heading')}</h2>
       <ul className="grid gap-4 sm:grid-cols-2">
         {items.map(txt => (

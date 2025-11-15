@@ -24,7 +24,7 @@ const { containerRef, setSpeed, speed, paused, setPaused } =
   const items = [...data, ...data]
 
   return (
-    <section id="realizacje" className="mx-auto max-w-6xl px-4 py-16">
+    <section id="realizacje" className="mx-auto max-w-6xl px-4 py-10 sm:py-12">
       <div className="mb-6 flex items-end justify-between">
         <div>
           <h2 className="text-2xl font-bold">{t('projects.heading')}</h2>
