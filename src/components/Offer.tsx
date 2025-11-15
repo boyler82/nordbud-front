@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export default function Offer() {
   const { t } = useTranslation()
+  const [openKey, setOpenKey] = useState<string | null>(null)
 
   const serviceKeys = ['carpentry', 'renovation', 'concrete', 'roofFacade']
 
@@ -13,62 +15,80 @@ export default function Offer() {
   }))
 
   const reasonsKeys = ['experience', 'quality', 'communication', 'onTime']
-
   const reasons = reasonsKeys.map(key => ({
     key,
     text: t(`offer.why.items.${key}`),
   }))
 
+  const toggle = (key: string) => {
+    setOpenKey(prev => (prev === key ? null : key))
+  }
+
   return (
     <section id="oferta" className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-      {/* Główny nagłówek sekcji */}
       <header className="max-w-3xl">
-        <h2 className="text-2xl sm:text-3xl font-bold">
-          {t('offer.heading')}
-        </h2>
-        <p className="mt-3 text-sm sm:text-base text-gray-600">
-          {t('offer.lead')}
-        </p>
+        <h2 className="text-2xl sm:text-3xl font-bold">{t('offer.heading')}</h2>
+        <p className="mt-3 text-sm sm:text-base text-gray-600">{t('offer.lead')}</p>
       </header>
 
-      {/* Kafle usług */}
+      {/* LISTA USŁUG */}
       <div className="mt-8 grid gap-6 md:grid-cols-2">
-        {services.map(s => (
-          <article
-            key={s.key}
-            className="
-              group relative overflow-hidden
-              rounded-2xl border bg-white/80
-              p-5 sm:p-6
-              shadow-sm
-              transition
-              hover:-translate-y-1 hover:shadow-lg hover:border-brand-400
-            "
-          >
-            <h3 className="text-lg font-semibold text-gray-900">
-              {s.title}
-            </h3>
+        {services.map(s => {
+          const isOpen = openKey === s.key
 
-            <p className="mt-2 text-sm text-gray-600">
-              {s.short}
-            </p>
-
-            {/* Szczegóły pojawiające się przy hover / tap */}
-            <p
+          return (
+            <article
+              key={s.key}
               className="
-                mt-3 text-sm text-gray-700
-                opacity-0 max-h-0
-                group-hover:opacity-100 group-hover:max-h-40
-                transition-all duration-300 ease-out
+                rounded-2xl border bg-white/80 shadow-sm transition
+                hover:-translate-y-1 hover:shadow-lg hover:border-brand-400
               "
             >
-              {s.details}
-            </p>
-          </article>
-        ))}
+              <button
+                type="button"
+                onClick={() => toggle(s.key)}
+                className="flex w-full flex-col items-stretch text-left p-5 sm:p-6"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-gray-600">
+                      {s.short}
+                    </p>
+                  </div>
+
+                  {/* NOWA IKONA + / - */}
+                  <span
+                    aria-hidden="true"
+                    className="
+                      flex h-7 w-7 items-center justify-center rounded-full border
+                      text-lg font-bold text-brand-600
+                      transition-all duration-300
+                    "
+                  >
+                    {isOpen ? '−' : '+'}
+                  </span>
+                </div>
+
+                {/* rozwinięcie */}
+                {isOpen && (
+                  <p
+                    className="
+                      mt-4 text-sm text-gray-700 animate-fadeIn
+                    "
+                  >
+                    {s.details}
+                  </p>
+                )}
+              </button>
+            </article>
+          )
+        })}
       </div>
 
-      {/* „Dlaczego my” */}
+      {/* DLACZEGO MY */}
       <section className="mt-10 rounded-2xl border bg-white/80 p-5 sm:p-6 shadow-sm">
         <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
           {t('offer.why.heading')}
@@ -78,11 +98,8 @@ export default function Offer() {
         </p>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">
           {reasons.map(r => (
-            <li
-              key={r.key}
-              className="flex items-start gap-2 text-sm text-gray-800"
-            >
-              <span className="mt-[4px] h-2 w-2 rounded-full bg-brand-500" />
+            <li key={r.key} className="flex items-start gap-2 text-sm text-gray-800">
+              <span className="mt-[6px] h-2.5 w-2.5 rounded-full bg-brand-500" />
               <span>{r.text}</span>
             </li>
           ))}

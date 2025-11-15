@@ -6,7 +6,7 @@ type Options = {
 }
 
 export default function useMarquee<T extends HTMLElement>(opts: Options = {}) {
-  const { pxPerSec = 45 } = opts // domyślnie 50 px/s
+  const { pxPerSec = 50 } = opts // domyślnie 50 px/s
   const containerRef = useRef<T | null>(null)
   const [speed] = useState(pxPerSec)
 
@@ -23,13 +23,12 @@ export default function useMarquee<T extends HTMLElement>(opts: Options = {}) {
         const dt = (time - lastTime) / 1000 // sekundy
         const delta = pxPerSec * dt
 
-        // przesuwamy scrollLeft
         el.scrollLeft += delta
 
-        const maxScroll = el.scrollWidth - el.clientWidth
-        if (maxScroll > 0 && el.scrollLeft >= maxScroll - 1) {
-          // gdy dojedziemy do końca, wracamy na początek
-          el.scrollLeft = 0
+        // PĘTLA BEZ SKOKU — zakładamy items = [...data, ...data]
+        const half = el.scrollWidth / 2
+        if (half > 0 && el.scrollLeft >= half) {
+          el.scrollLeft -= half
         }
       }
       lastTime = time
@@ -38,7 +37,7 @@ export default function useMarquee<T extends HTMLElement>(opts: Options = {}) {
 
     animationId = requestAnimationFrame(step)
 
-    // pauza podczas dotyku / scrolla na mobile, żeby nie "walczyć" z użytkownikiem
+    // pauza podczas dotyku / drag, żeby nie walczyć z użytkownikiem
     const onDown = () => { paused.current = true }
     const onUp = () => { paused.current = false }
 
