@@ -7,11 +7,20 @@ import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import useScrollToHash from '@/hooks/useScrollToHash'
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function App() {
+  const { i18n } = useTranslation();
+
   useEffect(() => {
-    document.title = 'Valheimbygg AS';
-  }, []);
+    const lang = i18n.resolvedLanguage || 'no';
+    const titles: Record<string, string> = {
+      no: 'Valheimbygg AS – Byggfirma i Norge',
+      en: 'Valheimbygg AS – Construction company in Norway',
+      pl: 'Valheimbygg AS – Firma budowlana w Norwegii',
+    };
+    document.title = titles[lang] || titles.no;
+  }, [i18n.resolvedLanguage]);
   useScrollToHash(96);
 
   return (
