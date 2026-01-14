@@ -38,8 +38,8 @@ export default function Hero() {
         {/* Obrazek */}
         <div className="mt-6 md:mt-0 overflow-hidden rounded-2xl border shadow-sm">
           <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop"
-            alt="Plac budowy — wizualizacja realizacji Valheimbygg"
+            src="/hero-norwegian-ice.svg"
+            alt="Niebieskie V na tle norweskiego lodu"
             className="aspect-[16/10] w-full object-cover"
           />
         </div>

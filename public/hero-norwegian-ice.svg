@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Niebieskie V na tle norweskiego lodu</title>
+  <desc id="desc">Stylizowana grafika: niebieskie V i lodowe ksztalty na tle zimowego blekitu.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cfe9ff"/>
+      <stop offset="100%" stop-color="#6fb3e6"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#d6f1ff" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <g opacity="0.95">
+    <polygon fill="url(#ice)" points="0,620 260,520 380,620 260,720"/>
+    <polygon fill="url(#ice)" points="260,720 520,560 720,720 520,800"/>
+    <polygon fill="url(#ice)" points="720,720 980,560 1200,680 1200,800"/>
+    <polygon fill="url(#ice)" points="100,520 260,420 380,500 220,600"/>
+    <polygon fill="url(#ice)" points="540,520 700,420 860,520 700,620"/>
+    <polygon fill="url(#ice)" points="860,520 1040,420 1180,520 1000,620"/>
+  </g>
+  <g>
+    <path d="M420 170 L600 570 L780 170" fill="none" stroke="#1e6fbf" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M470 170 L600 470 L730 170" fill="none" stroke="#3f8ed8" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="600" y="690" text-anchor="middle" font-family="Verdana, Geneva, sans-serif" font-size="40" fill="#0f4f8a">
+    Norweski lod
+  </text>
+</svg>

@@ -56,6 +56,8 @@
   "contact": {
     "heading": "Kontakt",
     "emailText": "Napisz do nas:",
+    "phoneText": "Zadzwoń:",
+    "addressText": "Adres:",
     "name": "Imię i nazwisko",
     "email": "E-mail",
     "phone": "Telefon (opcjonalnie)",

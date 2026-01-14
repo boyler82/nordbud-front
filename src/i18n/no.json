@@ -57,6 +57,8 @@
   "contact": {
     "heading": "Kontakt",
     "emailText": "Skriv til oss:",
+    "phoneText": "Ring oss:",
+    "addressText": "Adresse:",
     "name": "Fullt navn",
     "email": "E-post",
     "phone": "Telefon (valgfritt)",

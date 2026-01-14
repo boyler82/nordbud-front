@@ -68,6 +68,16 @@ export default function ContactSection() {
           post@valheimbygg.no
         </a>
       </p>
+      <p className="mt-2 text-gray-600">
+        {t("contact.phoneText")}{" "}
+        <a href="tel:+4747729371" className="text-brand-600">
+          +47 477 293 71
+        </a>
+      </p>
+      <p className="mt-2 text-gray-600">
+        {t("contact.addressText")}{" "}
+        <span>Vårvegen 3, 9023 Krokelvdalen</span>
+      </p>
 
       <form onSubmit={handleSubmit} className="mt-8 grid gap-4" noValidate>
         <input
