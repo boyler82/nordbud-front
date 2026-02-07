@@ -57,7 +57,7 @@ export default function Hero() {
             <img
               key={src}
               src={src}
-              alt="Realizacje Nordbud"
+              alt={t('alt.hero.slider')}
               className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
                 i === activeIndex ? 'opacity-100' : 'opacity-0'
               }`}

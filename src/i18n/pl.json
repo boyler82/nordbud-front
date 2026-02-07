@@ -156,6 +156,19 @@
     "unclassifiedDesc": "Inne niesklasyfikowane pliki cookie to takie, które są analizowane i nie zostały jeszcze przypisane do żadnej kategorii.",
     "save": "Zapisz"
   },
+  "alt": {
+    "hero": {
+      "slider": "Photo of Valheimbygg projects"
+    },
+    "systeme": {
+      "suspendedCeiling": "Photo of a suspended ceiling system",
+      "gypsumCeiling": "Photo of a gypsum board ceiling",
+      "acousticCeiling": "Photo of a perforated (acoustic) ceiling",
+      "woodCeiling": "Photo of a wooden or panel ceiling",
+      "gypsumPartitions": "Photo of gypsum board partitions",
+      "glassPartitions": "Photo of glass partitions"
+    }
+  },
     "projects": {
   "heading": "Wybrane realizacje",
   "subtitle": "Kilka przykładowych realizacji dla klientów prywatnych i firm.",

@@ -4,7 +4,7 @@ import { useRef } from 'react'
 type GalleryModalProps = {
   isOpen: boolean
   title: string
-  images: string[]
+  items: { src: string; alt: string }[]
   closeLabel: string
   emptyLabel: string
   onClose: () => void
@@ -42,7 +42,7 @@ function ImageWithLoader({
 export default function GalleryModal({
   isOpen,
   title,
-  images,
+  items,
   closeLabel,
   emptyLabel,
   onClose,
@@ -97,15 +97,15 @@ export default function GalleryModal({
           {title}
         </h3>
 
-        {images.length === 0 ? (
+        {items.length === 0 ? (
           <p className="text-sm text-gray-600">{emptyLabel}</p>
         ) : (
           <div className="grid gap-3 sm:grid-cols-2">
-            {images.map((src, idx) => (
+            {items.map((img, idx) => (
               <ImageWithLoader
-                key={`${src}-${idx}`}
-                src={src}
-                alt={`${title} ${idx + 1}`}
+                key={`${img.src}-${idx}`}
+                src={img.src}
+                alt={img.alt || `${title} ${idx + 1}`}
                 className="w-full object-cover"
               />
             ))}

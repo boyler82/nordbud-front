@@ -156,6 +156,19 @@
     "unclassifiedDesc": "Other unclassified cookies are those that are being analyzed and have not been classified into a category yet.",
     "save": "Save"
   },
+  "alt": {
+    "hero": {
+      "slider": "Photo from Valheimbygg projects"
+    },
+    "systeme": {
+      "suspendedCeiling": "Photo of a suspended ceiling system",
+      "gypsumCeiling": "Photo of a gypsum board ceiling",
+      "acousticCeiling": "Photo of a perforated (acoustic) ceiling",
+      "woodCeiling": "Photo of a wooden or panel ceiling",
+      "gypsumPartitions": "Photo of gypsum board partitions",
+      "glassPartitions": "Photo of glass partitions"
+    }
+  },
 
   "projects": {
   "heading": "Selected Projects",

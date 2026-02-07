@@ -157,6 +157,19 @@
     "unclassifiedDesc": "Andre ukategoriserte informasjonskapsler er de som blir analysert og som foreløpig ikke er klassifisert i en kategori.",
     "save": "Lagre"
   },
+  "alt": {
+    "hero": {
+      "slider": "Photo of Valheimbygg projects"
+    },
+    "systeme": {
+      "suspendedCeiling": "Photo of a suspended ceiling system",
+      "gypsumCeiling": "Photo of a gypsum board ceiling",
+      "acousticCeiling": "Photo of a perforated (acoustic) ceiling",
+      "woodCeiling": "Photo of a wooden or panel ceiling",
+      "gypsumPartitions": "Photo of gypsum board partitions",
+      "glassPartitions": "Photo of glass partitions"
+    }
+  },
   
 "projects": {
   "heading": "Utvalgte prosjekter",

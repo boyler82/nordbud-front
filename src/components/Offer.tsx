@@ -7,7 +7,7 @@ export default function Offer() {
   const [openKeys, setOpenKeys] = useState<string[]>(['systeme'])
   const [activeGallery, setActiveGallery] = useState<{
     title: string
-    images: string[]
+    items: { src: string; alt: string }[]
   } | null>(null)
 
   const serviceKeys = ['systeme', 'montasje', 'snekker', 'betong']
@@ -22,78 +22,128 @@ export default function Offer() {
 
   const galleriesByService: Record<
     string,
-    { key: string; label: string; images: string[] }[]
+    { key: string; label: string; items: { src: string; alt: string }[] }[]
   > = {
     systeme: [
       {
         key: 'ceilings-system',
         label: t('offer.gallery.systeme.ceilingsSystem'),
-        images: [
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467188/624157112_1522303939896291_1616043400929296165_n_ztvs35.jpg',
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467079/625848100_1427852935404853_8619980546053770923_n_kb8v7r.jpg',
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467081/624652392_1275157338012754_2085512793756346340_n_azvswy.jpg',
+        items: [
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467188/624157112_1522303939896291_1616043400929296165_n_ztvs35.jpg',
+            alt: t('alt.systeme.suspendedCeiling'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467079/625848100_1427852935404853_8619980546053770923_n_kb8v7r.jpg',
+            alt: t('alt.systeme.suspendedCeiling'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467081/624652392_1275157338012754_2085512793756346340_n_azvswy.jpg',
+            alt: t('alt.systeme.suspendedCeiling'),
+          },
         ],
       },
       {
         key: 'ceilings-gk',
         label: t('offer.gallery.systeme.ceilingsGk'),
-        images: [
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770485494/Rodzaje-profili-do-plyt-gipsowo-kartonowych.jpg_qx0yoz.webp',
+        items: [
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770485494/Rodzaje-profili-do-plyt-gipsowo-kartonowych.jpg_qx0yoz.webp',
+            alt: t('alt.systeme.gypsumCeiling'),
+          },
         ],
       },
       {
         key: 'ceilings-acoustic',
         label: t('offer.gallery.systeme.ceilingsAcoustic'),
-        images: [
-        
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467187/624630076_885245020776075_8036395950518381393_n_nwrvdw.jpg',
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/626317564_904669808696397_8396978757215254469_n_juckrn.jpg',
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/623828746_1991382111416859_2751002747916170571_n_kga1r4.jpg',
+        items: [
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467081/624652392_1275157338012754_2085512793756346340_n_azvswy.jpg',
+            alt: t('alt.systeme.acousticCeiling'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770466952/623879116_1772609086753118_1248088909984247369_n_vv8uqx.jpg',
+            alt: t('alt.systeme.acousticCeiling'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467187/624630076_885245020776075_8036395950518381393_n_nwrvdw.jpg',
+            alt: t('alt.systeme.acousticCeiling'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/626317564_904669808696397_8396978757215254469_n_juckrn.jpg',
+            alt: t('alt.systeme.acousticCeiling'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/623828746_1991382111416859_2751002747916170571_n_kga1r4.jpg',
+            alt: t('alt.systeme.acousticCeiling'),
+          },
         ],
       },
       {
         key: 'ceilings-wood',
         label: t('offer.gallery.systeme.ceilingsWood'),
-        images: [
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467081/624652392_1275157338012754_2085512793756346340_n_azvswy.jpg',
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770466952/623879116_1772609086753118_1248088909984247369_n_vv8uqx.jpg',
+        items: [
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467187/624630076_885245020776075_8036395950518381393_n_nwrvdw.jpg',
+            alt: t('alt.systeme.woodCeiling'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/626317564_904669808696397_8396978757215254469_n_juckrn.jpg',
+            alt: t('alt.systeme.woodCeiling'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/623828746_1991382111416859_2751002747916170571_n_kga1r4.jpg',
+            alt: t('alt.systeme.woodCeiling'),
+          },
         ],
       },
       {
         key: 'walls-gk',
         label: t('offer.gallery.systeme.wallsGk'),
-        images: [
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770486464/44_195717012.jpg_itkhqb.jxl',
+        items: [
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770486464/44_195717012.jpg_itkhqb.jxl',
+            alt: t('alt.systeme.gypsumPartitions'),
+          },
         ],
       },
       {
         key: 'walls-glass',
         label: t('offer.gallery.systeme.wallsGlass'),
-        images: [
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770487956/Innvendige-glassvegger-kontorvegger-5_to57nu.jpg',
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770487943/Innvendige-glassvegger-kontorvegger-3-1-1_srtpcg.jpg',
-          'https://res.cloudinary.com/dioua8akg/image/upload/v1770466781/glasvegg_cba7iv.jpg',
+        items: [
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770487956/Innvendige-glassvegger-kontorvegger-5_to57nu.jpg',
+            alt: t('alt.systeme.glassPartitions'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770487943/Innvendige-glassvegger-kontorvegger-3-1-1_srtpcg.jpg',
+            alt: t('alt.systeme.glassPartitions'),
+          },
+          {
+            src: 'https://res.cloudinary.com/dioua8akg/image/upload/v1770466781/glasvegg_cba7iv.jpg',
+            alt: t('alt.systeme.glassPartitions'),
+          },
         ],
       },
     ],
     montasje: [
-      { key: 'doors', label: t('offer.gallery.montasje.doors'), images: [] },
-      { key: 'balustrades', label: t('offer.gallery.montasje.balustrades'), images: [] },
-      { key: 'facades', label: t('offer.gallery.montasje.facades'), images: [] },
-      { key: 'windows', label: t('offer.gallery.montasje.windows'), images: [] },
-      { key: 'kitchens', label: t('offer.gallery.montasje.kitchens'), images: [] },
+      { key: 'doors', label: t('offer.gallery.montasje.doors'), items: [] },
+      { key: 'balustrades', label: t('offer.gallery.montasje.balustrades'), items: [] },
+      { key: 'facades', label: t('offer.gallery.montasje.facades'), items: [] },
+      { key: 'windows', label: t('offer.gallery.montasje.windows'), items: [] },
+      { key: 'kitchens', label: t('offer.gallery.montasje.kitchens'), items: [] },
     ],
     snekker: [
-      { key: 'roof', label: t('offer.gallery.snekker.roof'), images: [] },
-      { key: 'timber', label: t('offer.gallery.snekker.timber'), images: [] },
-      { key: 'finish', label: t('offer.gallery.snekker.finish'), images: [] },
+      { key: 'roof', label: t('offer.gallery.snekker.roof'), items: [] },
+      { key: 'timber', label: t('offer.gallery.snekker.timber'), items: [] },
+      { key: 'finish', label: t('offer.gallery.snekker.finish'), items: [] },
     ],
     betong: [
-      { key: 'foundations', label: t('offer.gallery.betong.foundations'), images: [] },
-      { key: 'walls', label: t('offer.gallery.betong.walls'), images: [] },
-      { key: 'slabs', label: t('offer.gallery.betong.slabs'), images: [] },
-      { key: 'stairs', label: t('offer.gallery.betong.stairs'), images: [] },
-      { key: 'other', label: t('offer.gallery.betong.other'), images: [] },
+      { key: 'foundations', label: t('offer.gallery.betong.foundations'), items: [] },
+      { key: 'walls', label: t('offer.gallery.betong.walls'), items: [] },
+      { key: 'slabs', label: t('offer.gallery.betong.slabs'), items: [] },
+      { key: 'stairs', label: t('offer.gallery.betong.stairs'), items: [] },
+      { key: 'other', label: t('offer.gallery.betong.other'), items: [] },
     ],
   }
 
@@ -183,7 +233,7 @@ export default function Offer() {
                             </span>
                           <button
                             type="button"
-                            onClick={() => setActiveGallery({ title: g.label, images: g.images })}
+                          onClick={() => setActiveGallery({ title: g.label, items: g.items })}
                             className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-brand-600 hover:bg-gray-50"
                             aria-label={g.label}
                           >
@@ -234,7 +284,7 @@ export default function Offer() {
       <GalleryModal
         isOpen={!!activeGallery}
         title={activeGallery?.title ?? ''}
-        images={activeGallery?.images ?? []}
+        items={activeGallery?.items ?? []}
         closeLabel={t('modal.close')}
         emptyLabel={t('modal.empty')}
         onClose={() => setActiveGallery(null)}
