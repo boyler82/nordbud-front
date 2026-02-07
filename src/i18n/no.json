@@ -6,8 +6,8 @@
     "contact": "Kontakt oss", 
     "lang": "Språk" },
   "hero": {
-    "title": "Pålitelige byggeprosjekter for bedrifter og boliger",
-    "subtitle": "Valheimbygg AS — utførelse, oppussing, installasjoner. I tide, pålitelig, uten unødvendig papirarbeid.",
+    "title": "Valheimbygg AS – Solide byggeprosjekter for bedrifter og boliger",
+    "subtitle": "Vi leverer helhetlig bygging, rehabilitering og installasjoner — til avtalt tid, pålitelig og uten unødvendige formaliteter.\n\nTeamet i Valheimbygg AS består av kvalifiserte fagfolk, inkludert en byggingeniør med høyere utdanning og medarbeidere med norsk fagskoleutdanning (Fagskoleingeniør). Vi har mange års erfaring fra prosjekter i Norge og Polen.\n\nVi setter kvalitet, åpenhet og pålitelighet først i alle faser av prosjektet.",
     "ctaOffer": "Våre tjenester",
     "ctaQuote": "Be om pris"
   },
@@ -16,38 +16,96 @@
   "offer": {
     "heading": "Våre tjenester",
     "lead": "Vi tar oss av både mindre oppdrag og komplette prosjekter – fra første befaring til ferdig levert arbeid.",
+    "scope": "Arbeidsomfang:",
 
     "services": {
-      "carpentry": {
-        "title": "Snekker- og tømrerarbeid",
-        "short": "Innvendig og utvendig snekkerarbeid for bolig og næring.",
-        "details": "Vi utfører innvendig arbeid, listverk, gulv, lettvegger, dører, terrasser og andre treprosjekter tilpasset bygget og dine behov."
+      "systeme": {
+        "title": "Systemer",
+        "short": "Valheimbygg AS sin hovedspesialisering.",
+        "detailsIntro": "Vi tilbyr komplette løsninger innen moderne lettbyggingssystemer, med særlig fokus på himlinger og lettvegger. Vi bruker materialer fra anerkjente produsenter og leverer prosjekter i henhold til tekniske standarder og arkitektoniske retningslinjer.",
+        "items": [
+          "Nedforede himlinger - Montering av nedforede systemer fra Armstrong, Rockfon, Hunter Douglas, Rigips",
+          "Gipsplater (G-K) på stål- eller aluminiumsprofiler — med integrasjon av belysning, ventilasjon og andre installasjoner",
+          "Perforerte (akustiske) himlinger — gips eller metall, for akustisk kontroll i kontor-, service- og offentlige bygg",
+          "Tre- og panelhimlinger — montering av estetiske himlinger med naturlig eller finert overflate for interiører med høyere standard",
+          "Gipsvegger på systemer fra Rigips, Knauf, Norgips — inkludert brann-, lyd- og tekniske skiller",
+          "Glassvegger — montering i Moelven-systemer, med mulighet for skyvedører, beslag og aluminiumsdetaljer"
+        ]
       },
-      "renovation": {
-        "title": "Rehabilitering og oppussing",
-        "short": "Oppgradering av eksisterende bygg, rom og flater.",
-        "details": "Total- og delvis renovering av bolig, bad, kjøkken, kontor og fellesarealer – med fokus på kvalitet, ryddighet og gode løsninger."
+      "montasje": {
+        "title": "Montasje",
+        "short": "Presise montasjearbeider i nye og moderniserte bygg.",
+        "detailsIntro": "Vi utfører presise montasjearbeider både i nye og moderniserte bygg. Hvert oppdrag utføres i henhold til prosjektdokumentasjon, med høy estetikk og varig kvalitet.",
+        "items": [
+          "Montering av inn- og ytterdører — tre, stål, aluminium",
+          "Montering av rekkverk — stål, glass og tre (innvendig og utvendig)",
+          "Montering av ventilerte fasader og lette fasadesystemer — kompositt, tre eller fibersement",
+          "Montering av vinduer — i mur, tre og fasadesystemer",
+          "Montering av kjøkkeninnredning — presis tilpasning til installasjoner og utstyr"
+        ]
       },
-      "concrete": {
-        "title": "Betong og fundament",
-        "short": "Støp av plate på mark, fundamenter og konstruksjoner.",
-        "details": "Vi leverer grunnarbeid, ringmur, betongplater og mindre støpekonstruksjoner som gir et solid fundament for videre bygging."
+      "snekker": {
+        "title": "Snekker",
+        "short": "Planlagt utvidelse av tilbudet.",
+        "detailsIntro": "Vi planlegger å introdusere komplette snekkertjenester som omfatter takkonstruksjoner, trearbeid og finish med heltre og limtre.",
+        "items": [
+          "Takkonstruksjoner",
+          "Trearbeid og trebaserte konstruksjoner",
+          "Finish med heltre og limtre"
+        ]
       },
-      "roofFacade": {
-        "title": "Tak og fasade",
-        "short": "Trygge og energieffektive tak- og fasadeløsninger.",
-        "details": "Utskifting av kledning, etterisolering, takarbeid og utbedring av skader – slik at bygget både ser bedre ut og tåler norsk klima."
+      "betong": {
+        "title": "Betong",
+        "short": "Planlagt utvidelse av tilbudet.",
+        "detailsIntro": "Planlagt utvidelse med armerte betongkonstruksjoner — fundamenter, vegger, dekker, trapper og andre elementer i monolittisk eller prefabrikkert utførelse, i tråd med prosjektdokumentasjon og tekniske krav.",
+        "items": [
+          "Fundamenter",
+          "Vegger",
+          "Dekker og plater",
+          "Trapper",
+          "Andre elementer"
+        ]
+      }
+    },
+    "gallery": {
+      "systeme": {
+        "ceilingsSystem": "Systemhimlinger",
+        "ceilingsGk": "Gips-himlinger",
+        "ceilingsAcoustic": "Akustiske himlinger",
+        "ceilingsWood": "Tre- og panelhimlinger",
+        "wallsGk": "Gipsvegger (G-K)",
+        "wallsGlass": "Glassvegger"
+      },
+      "montasje": {
+        "doors": "Dører",
+        "balustrades": "Rekkverk",
+        "facades": "Ventilerte fasader",
+        "windows": "Vinduer",
+        "kitchens": "Kjøkkeninnredning"
+      },
+      "snekker": {
+        "roof": "Takkonstruksjoner",
+        "timber": "Trearbeid",
+        "finish": "Trebaserte finisharbeider"
+      },
+      "betong": {
+        "foundations": "Fundamenter",
+        "walls": "Vegger",
+        "slabs": "Dekker og plater",
+        "stairs": "Trapper",
+        "other": "Andre elementer"
       }
     },
 
     "why": {
-      "heading": "Hvorfor velge Valheimbygg?",
-      "lead": "Vi kombinerer håndverksfaglig erfaring med tydelig kommunikasjon og forutsigbar framdrift.",
+      "heading": "Hvorfor velge Valheimbygg AS?",
+      "lead": "Hos Valheimbygg AS prioriterer vi soliditet, åpenhet og profesjonalitet i alle faser. Vi leverer byggeprosjekter for private og næring, og kombinerer skandinaviske standarder med lang erfaring fra Norge og Polen.",
       "items": {
-        "experience": "Flere års erfaring fra små og mellomstore prosjekter i Norge.",
-        "quality": "Fokus på kvalitet i utførelse, gode materialvalg og ryddige arbeidsplasser.",
-        "communication": "Tydelig dialog gjennom hele prosjektet – du vet alltid hva som skjer.",
-        "onTime": "Vi planlegger realistisk og jobber for å levere til avtalt tid."
+        "experience": "Erfaren og kvalifisert kompetanse — teamet består av byggingeniører med høyere utdanning og tekniske spesialister fra norske fagskoler (Fagskoleingeniør). Vi kombinerer prosjekteringskunnskap med praktisk utførelse.",
+        "quality": "Høyeste kvalitet på utførelse og materialer — vi bruker sertifiserte materialer fra anerkjente produsenter (bl.a. Rigips, Knauf, Armstrong, Rockfon, Moelven) og følger monteringsstandarder nøye.",
+        "onTime": "Pålitelighet og å holde avtaler — vi jobber med realistiske tidsplaner og full åpenhet gjennom hele prosjektet.",
+        "communication": "Løpende kontakt og god kommunikasjon — vi informerer om fremdrift og viktige beslutninger, og gir teknisk veiledning.",
+        "details": "Fokus på detaljer — hvert prosjekt behandles individuelt med stor nøyaktighet og respekt for arkitektoniske føringer og kundens forventninger."
       }
     }
   },
@@ -69,6 +127,36 @@
     "error": "Noe gikk galt. Prøv igjen eller send e-post til biuro@nordbud.pl."
   },
   "footer": { "rights": "Alle rettigheter reservert." },
+  "modal": {
+    "close": "Lukk",
+    "empty": "Ingen bilder å vise ennå."
+  },
+  "cookies": {
+    "title": "Wallpro respekterer personvernet ditt",
+    "lead": "Vi bruker informasjonskapsler for å forbedre nettleseropplevelsen din, vise personlig tilpassede annonser eller innhold, og analysere trafikken vår. Ved å klikke på \"Godta alle\", samtykker du til vår bruk av informasjonskapsler.",
+    "reject": "Avvis",
+    "acceptAll": "Godta alle",
+    "customize": "Tilpass",
+    "prefsTitle": "Tilpass samtykkepreferanser",
+    "prefsLead": "Close",
+    "prefsText": "Vi bruker informasjonskapsler for å hjelpe deg med å navigere effektivt og utføre visse funksjoner. Du finner detaljert informasjon om alle informasjonskapsler under hver samtykkekategori nedenfor. Informasjonskapslene som er kategorisert som \"Nødvendige\" lagres i nettleseren din da de er avgjørende for å aktivere de grunnleggende funksjonene til nettstedet.",
+    "more": "Vis mer",
+    "necessary": "Nødvendig",
+    "alwaysActive": "Alltid aktiv",
+    "alwaysOn": "Alltid aktiv",
+    "necessaryDesc": "Nødvendige cookies er avgjørende for grunnleggende funksjoner på nettstedet, og nettstedet fungerer ikke på den tiltenkte måten uten dem. Disse cookies lagrer ikke personlig identifiserbare data.",
+    "functional": "Funksjonell",
+    "functionalDesc": "Funksjonelle cookies hjelper deg med å utføre visse funksjoner som å dele innholdet på nettstedet på sosiale medieplattformer, samle tilbakemeldinger og andre tredjepartsfunksjoner.",
+    "analytics": "Analytics",
+    "analyticsDesc": "Analytiske cookies brukes til å forstå hvordan besøkende samhandler med nettstedet. Disse cookies hjelper deg med å gi informasjon om beregningene antall besøkende, fluktfrekvens, trafikkilde osv.",
+    "performance": "Ytelse",
+    "performanceDesc": "Ytelsescookies cookies til å forstå og analysere de viktigste ytelsesindeksene til nettstedet som hjelper til med å gi en bedre brukeropplevelse for de besøkende.",
+    "ads": "Annonse",
+    "adsDesc": "Annonsecookies brukes til å levere besøkende med tilpassede annonser basert på sidene de besøkte før og analysere effektiviteten av annonsekampanjen.",
+    "unclassified": "Ukategorisert",
+    "unclassifiedDesc": "Andre ukategoriserte informasjonskapsler er de som blir analysert og som foreløpig ikke er klassifisert i en kategori.",
+    "save": "Lagre"
+  },
   
 "projects": {
   "heading": "Utvalgte prosjekter",
@@ -76,19 +164,15 @@
   "viewAria": "Se mer om prosjektet {{title}}",
   "close": "Lukk",
   "titles": {
-    "hala-magazynowa-gdansk": "Lagerhall – Gdańsk",
-    "dom-jednorodzinny-gdynia": "Enebolig – Gdynia",
-    "remont-biura-sopot": "Kontoroppussing – Sopot"
+    "flakstad-skole": "Flakstad Skole",
+    "batsfjord-skole": "Båtsfjord Skole"
   },
   "details": {
-    "hala-magazynowa-gdansk": {
-      "description": "Nybygg av lagerhall med stålkonstruksjon, betonggulv og komplett fasade. Leveranse inkluderte grunnarbeid, betong og innvendig tilpasning."
+    "flakstad-skole": {
+      "description": "Bilder fra prosjektet Flakstad Skole."
     },
-    "dom-jednorodzinny-gdynia": {
-      "description": "Moderne enebolig med høy standard innvendig, energiøkonomiske løsninger og nøkkelferdig utførelse."
-    },
-    "remont-biura-sopot": {
-      "description": "Totalrenovering av kontorlokale: nye overflater, belysning, glassvegger og tilpassede løsninger for arbeidssoner."
+    "batsfjord-skole": {
+      "description": "Bilder fra prosjektet Båtsfjord Skole."
     }
   }
 }

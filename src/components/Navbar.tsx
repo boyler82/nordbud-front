@@ -16,15 +16,15 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+    <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur transition-transform duration-200 hover:scale-[1.01]">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 md:h-24">
         {/* Logo */}
         <a
           href="#start"
           className="text-brand-600 hover:text-brand-700 transition-colors"
           onClick={() => setOpen(false)}
         >
-          <Logo />
+          <Logo height={115.2} />
         </a>
 
         {/* Desktop nav */}

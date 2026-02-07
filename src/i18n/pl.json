@@ -6,8 +6,8 @@
   "contact": "Kontakt", 
   "lang": "Język" },
   "hero": {
-    "title": "Solidne realizacje budowlane dla firm i domów",
-    "subtitle": "Valheimbygg AS – wykonawstwo, remonty, instalacje. Terminowo, rzetelnie, bez zbędnych formalności.",
+    "title": "Valheimbygg AS – Solidne realizacje budowlane dla firm i domów",
+    "subtitle": "Oferujemy kompleksowe wykonawstwo, remonty oraz instalacje – terminowo, rzetelnie i bez zbędnych formalności.\n\nZespół Valheimbygg AS tworzą wykwalifikowani specjaliści, w tym inżynier budownictwa z wykształceniem wyższym oraz pracownicy po norweskiej szkole technicznej (Fagskoleingeniør). Posiadamy wieloletnie doświadczenie zdobyte przy realizacji projektów w Norwegii i Polsce.\n\nStawiamy na jakość, przejrzystość i niezawodność na każdym etapie inwestycji.",
     "ctaOffer": "Zobacz ofertę",
     "ctaQuote": "Umów wycenę"
   },
@@ -16,38 +16,96 @@
   "offer": {
     "heading": "Nasze usługi",
     "lead": "Realizujemy zarówno mniejsze zlecenia, jak i kompletne inwestycje – od pierwszej wizji po oddanie gotowej pracy.",
+    "scope": "Zakres prac:",
 
     "services": {
-      "carpentry": {
-        "title": "Prace stolarskie i ciesielskie",
-        "short": "Zabudowy, ścianki, tarasy i wykończenia w drewnie.",
-        "details": "Wykonujemy prace wewnętrzne i zewnętrzne: podłogi, ścianki działowe, zabudowy, tarasy oraz inne elementy drewniane dopasowane do budynku."
+      "systeme": {
+        "title": "Systemy zabudowy",
+        "short": "Główna specjalizacja Valheimbygg AS.",
+        "detailsIntro": "Oferujemy kompleksowe wykonawstwo w zakresie nowoczesnych systemów zabudowy lekkiej, ze szczególnym uwzględnieniem sufitów podwieszanych i ścian działowych. Pracujemy na materiałach renomowanych producentów i realizujemy projekty zgodnie z normami technicznymi oraz wytycznymi architektonicznymi.",
+        "items": [
+          "Sufity podwieszane - Montaż systemów podwieszanych od firm Armstrong, Rockfon, Hunter Douglas, Rigips",
+          "Sufity z płyt gipsowo-kartonowych (G-K) na ruszcie stalowym lub aluminiowym – z możliwością integracji oświetlenia, wentylacji i innych instalacji",
+          "Sufity perforowane (akustyczne) – z płyt G-K lub metalowych, zapewniające kontrolę akustyki w pomieszczeniach biurowych, usługowych i użyteczności publicznej",
+          "Sufity drewniane i panelowe – montaż estetycznych sufitów z wykończeniem naturalnym lub fornirowanym, dla wnętrz o podwyższonym standardzie",
+          "Zabudowy z płyt G-K na systemach Rigips, Knauf, Norgips – w tym przegrody ogniowe, akustyczne oraz techniczne",
+          "Ścianki szklane – montaż przeszkleń w systemach Moelven, z opcjonalną integracją drzwi przesuwnych, okuć technicznych i elementów aluminiowych"
+        ]
       },
-      "renovation": {
-        "title": "Remonty i modernizacje",
-        "short": "Odświeżanie i przebudowa istniejących pomieszczeń.",
-        "details": "Kompleksowe i częściowe remonty mieszkań, łazienek, kuchni oraz biur – z naciskiem na jakość, porządek i funkcjonalne rozwiązania."
+      "montasje": {
+        "title": "Usługi montażowe",
+        "short": "Precyzyjne prace montażowe w nowych i modernizowanych obiektach.",
+        "detailsIntro": "Realizujemy precyzyjne prace montażowe zarówno w obiektach nowych, jak i modernizowanych. Każde zlecenie wykonujemy zgodnie z dokumentacją projektową, przy zachowaniu wysokiej estetyki i trwałości montażu.",
+        "items": [
+          "Montaż drzwi wewnętrznych i zewnętrznych – drewnianych, stalowych, aluminiowych",
+          "Montaż balustrad – systemy stalowe, szklane, drewniane (wewnętrzne i zewnętrzne)",
+          "Montaż elewacji wentylowanych i lekkich systemów elewacyjnych – z płyt kompozytowych, drewnianych lub włóknocementowych",
+          "Montaż okien – w konstrukcjach murowanych, drewnianych oraz systemach fasadowych",
+          "Montaż zabudowy kuchennej – z precyzyjnym dopasowaniem do instalacji i wyposażenia"
+        ]
       },
-      "concrete": {
-        "title": "Beton i fundamenty",
-        "short": "Płyty fundamentowe, ławy i inne elementy żelbetowe.",
-        "details": "Przygotowujemy fundamenty, płyty na gruncie i inne konstrukcje betonowe będące solidną podstawą pod dalsze prace budowlane."
+      "snekker": {
+        "title": "Usługi ciesielskie",
+        "short": "W planach rozszerzenia oferty.",
+        "detailsIntro": "W przyszłości planujemy wdrożenie kompleksowych usług ciesielskich obejmujących konstrukcje dachowe, zabudowy drewniane oraz prace wykończeniowe z użyciem drewna litego i klejonego.",
+        "items": [
+          "Konstrukcje dachowe",
+          "Zabudowy drewniane",
+          "Wykończenia w drewnie"
+        ]
       },
-      "roofFacade": {
-        "title": "Dach i elewacja",
-        "short": "Nowe pokrycia dachowe oraz odnowa elewacji.",
-        "details": "Wymiana pokrycia, docieplenia, nowa elewacja oraz naprawy – tak, aby budynek był dobrze zabezpieczony i estetyczny."
+      "betong": {
+        "title": "Konstrukcje betonowe",
+        "short": "W planach rozszerzenia oferty.",
+        "detailsIntro": "Planowane rozszerzenie usług o wykonawstwo konstrukcji żelbetowych – fundamenty, ściany, stropy, schody i inne elementy w technologii monolitycznej lub prefabrykowanej, zgodnie z dokumentacją projektową i wymaganiami technicznymi.",
+        "items": [
+          "Fundamenty",
+          "Ściany",
+          "Stropy i płyty",
+          "Schody",
+          "Inne elementy"
+        ]
+      }
+    },
+    "gallery": {
+      "systeme": {
+        "ceilingsSystem": "Systemy sufitowe",
+        "ceilingsGk": "Sufity G-K",
+        "ceilingsAcoustic": "Sufity akustyczne",
+        "ceilingsWood": "Sufity drewniane i panelowe",
+        "wallsGk": "Zabudowy G-K",
+        "wallsGlass": "Ścianki szklane"
+      },
+      "montasje": {
+        "doors": "Drzwi",
+        "balustrades": "Balustrady",
+        "facades": "Elewacje wentylowane",
+        "windows": "Okna",
+        "kitchens": "Zabudowy kuchenne"
+      },
+      "snekker": {
+        "roof": "Konstrukcje dachowe",
+        "timber": "Zabudowy drewniane",
+        "finish": "Wykończenia w drewnie"
+      },
+      "betong": {
+        "foundations": "Fundamenty",
+        "walls": "Ściany",
+        "slabs": "Stropy i płyty",
+        "stairs": "Schody",
+        "other": "Inne elementy"
       }
     },
 
     "why": {
-      "heading": "Dlaczego warto wybrać Valheimbygg?",
-      "lead": "Stawiamy na rzetelne wykonanie, dobrą komunikację i terminowe zakończenie prac.",
+      "heading": "Dlaczego warto wybrać Valheimbygg AS?",
+      "lead": "W Valheimbygg AS stawiamy na solidność, przejrzystość i profesjonalizm – na każdym etapie współpracy. Realizujemy projekty budowlane dla klientów prywatnych i komercyjnych, łącząc skandynawskie standardy z wieloletnim doświadczeniem zdobytym w Norwegii i Polsce.",
       "items": {
-        "experience": "Wieloletnie doświadczenie w projektach budowlanych w Norwegii.",
-        "quality": "Dokładność wykonania, właściwe materiały i dbałość o detale.",
-        "communication": "Stały kontakt na każdym etapie – wiesz, na jakim etapie jest zlecenie.",
-        "onTime": "Realistyczne terminy i praca nastawiona na dotrzymywanie ustaleń."
+        "experience": "Doświadczona i wykwalifikowana kadra — nasz zespół to inżynierowie budownictwa z wykształceniem wyższym oraz specjaliści techniczni po norweskich szkołach zawodowych (Fagskoleingeniør). Łączymy wiedzę projektową z praktycznym podejściem do wykonawstwa.",
+        "quality": "Najwyższa jakość wykonania i materiałów — korzystamy wyłącznie ze sprawdzonych, certyfikowanych materiałów renomowanych producentów (m.in. Rigips, Knauf, Armstrong, Rockfon, Moelven) i precyzyjnie przestrzegamy technologii montażu.",
+        "onTime": "Rzetelność i dotrzymywanie ustaleń — pracujemy w oparciu o realistyczne terminy oraz pełną transparentność na każdym etapie realizacji.",
+        "communication": "Stały kontakt i dobra komunikacja — informujemy o postępach prac i kluczowych decyzjach, zapewniając doradztwo techniczne.",
+        "details": "Dbałość o detale — każdy projekt traktujemy indywidualnie, z dużą starannością i szacunkiem do założeń architektonicznych oraz oczekiwań inwestora."
       }
     }
   },
@@ -67,27 +125,52 @@
     "sent": "Dziękujemy! Sprawdzimy i wrócimy z odpowiedzią.",
     "error": "Coś poszło nie tak. Spróbuj ponownie lub napisz na biuro@nordbud.pl."
   },
-  "footer": { "rights": "Wszelkie prawa zastrzeżone." 
-},
+  "footer": { "rights": "Wszelkie prawa zastrzeżone." },
+  "modal": {
+    "close": "Zamknij",
+    "empty": "Brak zdjęć do wyświetlenia."
+  },
+  "cookies": {
+    "title": "Wallpro szanuje Twoją prywatność",
+    "lead": "Używamy plików cookie, aby poprawić komfort przeglądania, wyświetlać spersonalizowane reklamy lub treści oraz analizować nasz ruch. Klikając „Zaakceptuj wszystkie”, wyrażasz zgodę na użycie plików cookie.",
+    "reject": "Odrzuć",
+    "acceptAll": "Zaakceptuj wszystkie",
+    "customize": "Dostosuj",
+    "prefsTitle": "Dostosuj preferencje zgody",
+    "prefsLead": "Zamknij",
+    "prefsText": "Używamy plików cookie, aby ułatwić nawigację i realizować określone funkcje. Szczegółowe informacje o wszystkich plikach cookie znajdziesz poniżej w każdej kategorii zgody. Pliki cookie sklasyfikowane jako „Niezbędne” są zapisywane w przeglądarce, ponieważ są konieczne do prawidłowego działania podstawowych funkcji strony.",
+    "more": "Pokaż więcej",
+    "necessary": "Niezbędne",
+    "alwaysActive": "Zawsze aktywne",
+    "alwaysOn": "Zawsze aktywne",
+    "necessaryDesc": "Niezbędne pliki cookie są konieczne do podstawowego działania strony i bez nich serwis nie działa poprawnie. Te pliki cookie nie przechowują danych umożliwiających identyfikację osoby.",
+    "functional": "Funkcjonalne",
+    "functionalDesc": "Funkcjonalne pliki cookie pomagają realizować określone funkcje, takie jak udostępnianie treści w mediach społecznościowych, zbieranie opinii i inne funkcje stron trzecich.",
+    "analytics": "Analityczne",
+    "analyticsDesc": "Analityczne pliki cookie służą do zrozumienia, jak użytkownicy korzystają ze strony. Pomagają dostarczać informacje o metrykach takich jak liczba odwiedzających, współczynnik odrzuceń, źródło ruchu itp.",
+    "performance": "Wydajność",
+    "performanceDesc": "Pliki cookie wydajnościowe służą do zrozumienia i analizowania kluczowych wskaźników wydajności strony, co pomaga zapewnić lepsze doświadczenia użytkowników.",
+    "ads": "Reklamowe",
+    "adsDesc": "Reklamowe pliki cookie służą do wyświetlania spersonalizowanych reklam na podstawie odwiedzonych stron oraz do analizy skuteczności kampanii reklamowych.",
+    "unclassified": "Niesklasyfikowane",
+    "unclassifiedDesc": "Inne niesklasyfikowane pliki cookie to takie, które są analizowane i nie zostały jeszcze przypisane do żadnej kategorii.",
+    "save": "Zapisz"
+  },
     "projects": {
   "heading": "Wybrane realizacje",
   "subtitle": "Kilka przykładowych realizacji dla klientów prywatnych i firm.",
   "viewAria": "Zobacz więcej o projekcie {{title}}",
   "close": "Zamknij",
   "titles": {
-    "hala-magazynowa-gdansk": "Hala magazynowa – Gdańsk",
-    "dom-jednorodzinny-gdynia": "Dom jednorodzinny – Gdynia",
-    "remont-biura-sopot": "Remont biura – Sopot"
+    "flakstad-skole": "Flakstad Skole",
+    "batsfjord-skole": "Båtsfjord Skole"
   },
   "details": {
-    "hala-magazynowa-gdansk": {
-      "description": "Budowa hali magazynowej ze stalową konstrukcją, posadzką betonową i kompletną elewacją."
+    "flakstad-skole": {
+      "description": "Zdjęcia z realizacji projektu Flakstad Skole."
     },
-    "dom-jednorodzinny-gdynia": {
-      "description": "Nowoczesny dom jednorodzinny pod klucz z naciskiem na energooszczędność."
-    },
-    "remont-biura-sopot": {
-      "description": "Generalny remont biura: nowe podłogi, sufity, oświetlenie i zabudowy szklane."
+    "batsfjord-skole": {
+      "description": "Zdjęcia z realizacji projektu Båtsfjord Skole."
     }
   }
 }

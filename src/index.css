@@ -1,30 +1,40 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Uncial+Antiqua&display=swap");
 
 @theme {
-  --color-brand-50:  #f1f8ff;
-  --color-brand-100: #e2f0ff;
-  --color-brand-200: #bfe0ff;
-  --color-brand-300: #8cc6ff;
-  --color-brand-400: #59a9ff;
-  --color-brand-500: #2a89ff;
-  --color-brand-600: #1f6ee0;
-  --color-brand-700: #1756b3;
-  --color-brand-800: #123f80;
-  --color-brand-900: #0c2a59;
+  --color-brand-50:  #f4f6f2;
+  --color-brand-100: #e6ebe2;
+  --color-brand-200: #cbd7c3;
+  --color-brand-300: #aebfa3;
+  --color-brand-400: #8fa684;
+  --color-brand-500: #6e8f66;
+  --color-brand-600: #567652;
+  --color-brand-700: #455f42;
+  --color-brand-800: #364a33;
+  --color-brand-900: #263323;
 
-    /* Nowe zmienne dla gradientów */
-  --color-bg-gradient-1: linear-gradient(to bottom, #f5f5f5, #d40c66);
-  --color-bg-gradient-2: linear-gradient(to bottom, #ffffff, #e2e8ff);
+  /* Nowe zmienne dla gradientów */
+  --color-bg-gradient-1: linear-gradient(to bottom, #f7f8f5, #d8e1d1);
+  --color-bg-gradient-2: linear-gradient(to bottom, #ffffff, #e7efe1);
   --color-bg-gradient-3: linear-gradient(
   to bottom,
-  #f5f5f5,   /* jasna szarość */
-  #c3d1ff,   /* jasny niebieski przejściowy */
-  #1e3a8a    /* ciemny niebieski (Tailwind blue-900) */
+  #f7f8f5,   /* jasna szaro-zielona */
+  #dfe7d7,   /* sage transition */
+  #9db089    /* dusty green */
 );
 }
 
 html, body, #root { height: 100%; }
-body { -webkit-font-smoothing: antialiased;}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-display {
+  font-family: "Uncial Antiqua", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: 0.02em;
+}
 /* ukrycie paska przewijania dla karuzeli (opcjonalne) */
 .carousel::-webkit-scrollbar { display: none; }
 .carousel { -ms-overflow-style: none; scrollbar-width: none; }
@@ -33,8 +43,44 @@ body { -webkit-font-smoothing: antialiased;}
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--marquee-shift, 50%))); }
+}
+
+.marquee-track {
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
 section {
   background: transparent !important;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(247, 248, 245, 0.85);
+  backdrop-filter: blur(2px);
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  border: 4px solid rgba(110, 143, 102, 0.25);
+  border-top-color: #6e8f66;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 640px) {

@@ -5,12 +5,14 @@ import Offer from '@/components/Offer'
 import Projects from '@/components/Projects'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
+import CookieConsent from '@/components/CookieConsent'
 import useScrollToHash from '@/hooks/useScrollToHash'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export default function App() {
   const { i18n } = useTranslation();
+  const [showLoader, setShowLoader] = useState(false)
 
   useEffect(() => {
     const lang = i18n.resolvedLanguage || 'no'
@@ -44,8 +46,40 @@ export default function App() {
   }, [i18n.resolvedLanguage])
   useScrollToHash(96);
 
+  useEffect(() => {
+    let showTimer: number | undefined
+    let hideTimer: number | undefined
+
+    const onLoad = () => {
+      window.clearTimeout(showTimer)
+      window.clearTimeout(hideTimer)
+      setShowLoader(false)
+    }
+
+    showTimer = window.setTimeout(() => setShowLoader(true), 900)
+    hideTimer = window.setTimeout(onLoad, 8000)
+
+    if (document.readyState === 'complete') {
+      onLoad()
+      return
+    }
+
+    window.addEventListener('load', onLoad, { once: true })
+    return () => {
+      window.removeEventListener('load', onLoad)
+      window.clearTimeout(showTimer)
+      window.clearTimeout(hideTimer)
+    }
+  }, [])
+
+
   return (
 <div style={{ background: "var(--color-bg-gradient-3)" }} className="min-h-screen text-gray-900">
+      {showLoader && (
+        <div className="page-loader" aria-hidden>
+          <div className="spinner" />
+        </div>
+      )}
       <Navbar />
       <main>
         <section id="start" className="scroll-mt-24">
@@ -62,6 +96,7 @@ export default function App() {
         </section>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 }

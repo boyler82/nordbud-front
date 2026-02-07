@@ -6,8 +6,8 @@
     "contact": "Contact", 
     "lang": "Language" },
   "hero": {
-    "title": "Reliable construction for businesses and homes",
-    "subtitle": "Valheimbygg AS — construction, renovations, installations. On time, trustworthy, hassle-free.",
+    "title": "Valheimbygg AS – Solid construction for businesses and homes",
+    "subtitle": "We provide comprehensive construction, renovations, and installations — on time, reliable, and without unnecessary formalities.\n\nThe Valheimbygg AS team consists of qualified specialists, including a civil engineer with higher education and staff who completed a Norwegian technical school (Fagskoleingeniør). We have many years of experience delivering projects in Norway and Poland.\n\nWe focus on quality, transparency, and reliability at every stage of the investment.",
     "ctaOffer": "See offer",
     "ctaQuote": "Request a quote"
   },
@@ -15,38 +15,96 @@
   "offer": {
     "heading": "Our services",
     "lead": "We handle both smaller jobs and complete projects – from first site visit to final delivery.",
+    "scope": "Scope of work:",
 
     "services": {
-      "carpentry": {
-        "title": "Carpentry & joinery",
-        "short": "Interior and exterior carpentry for homes and commercial buildings.",
-        "details": "We build internal walls, floors, decking, terraces, doors and custom woodwork adapted to your project."
+      "systeme": {
+        "title": "Partition Systems",
+        "short": "Valheimbygg AS’s main specialization.",
+        "detailsIntro": "We provide comprehensive work in modern lightweight partition systems, with a strong focus on suspended ceilings and partition walls. We use materials from reputable manufacturers and deliver projects in line with technical standards and architectural guidelines.",
+        "items": [
+          "Suspended ceilings - Installation of suspended systems from Armstrong, Rockfon, Hunter Douglas, Rigips",
+          "Gypsum board (G-K) ceilings on steel or aluminum framing — with integration of lighting, ventilation, and other installations",
+          "Perforated (acoustic) ceilings — gypsum board or metal, ensuring acoustic control in offices, services, and public buildings",
+          "Wooden and panel ceilings — installation of aesthetic ceilings with natural or veneered finishes for higher-standard interiors",
+          "Gypsum board partitions on Rigips, Knauf, Norgips systems — including fire-rated, acoustic, and technical partitions",
+          "Glass partitions — installation in Moelven systems, with optional integration of sliding doors, technical fittings, and aluminum elements"
+        ]
       },
-      "renovation": {
-        "title": "Renovation & refurbishment",
-        "short": "Upgrading existing buildings, rooms and surfaces.",
-        "details": "Full or partial renovation of houses, bathrooms, kitchens, offices and common areas – with focus on quality and tidy work."
+      "montasje": {
+        "title": "Installation Services",
+        "short": "Precise installation work in new and modernized buildings.",
+        "detailsIntro": "We carry out precise installation work in both new and upgraded facilities. Every assignment is delivered according to project documentation, with high aesthetics and durable workmanship.",
+        "items": [
+          "Installation of internal and external doors — wooden, steel, aluminum",
+          "Installation of balustrades — steel, glass, and wooden systems (interior and exterior)",
+          "Installation of ventilated façades and lightweight façade systems — composite, wood, or fiber-cement panels",
+          "Window installation — in masonry, timber structures, and façade systems",
+          "Kitchen installation — precise fitting to utilities and equipment"
+        ]
       },
-      "concrete": {
-        "title": "Concrete & foundations",
-        "short": "Slabs on ground, foundations and small concrete structures.",
-        "details": "We deliver groundwork, ring walls and concrete slabs that give a solid base for further construction."
+      "snekker": {
+        "title": "Carpentry Services",
+        "short": "Planned service expansion.",
+        "detailsIntro": "We plan to introduce comprehensive carpentry services covering roof structures, timber installations, and finish work using solid and laminated wood.",
+        "items": [
+          "Roof structures",
+          "Timber installations",
+          "Finishing in solid and laminated wood"
+        ]
       },
-      "roofFacade": {
-        "title": "Roof & facade",
-        "short": "Safe and energy-efficient roof and facade solutions.",
-        "details": "Cladding replacement, insulation upgrades, roof work and repairs – so the building both looks good and withstands the Nordic climate."
+      "betong": {
+        "title": "Concrete Structures",
+        "short": "Planned service expansion.",
+        "detailsIntro": "Planned expansion to reinforced concrete works — foundations, walls, slabs, stairs, and other elements in monolithic or prefabricated technology, in accordance with project documentation and technical requirements.",
+        "items": [
+          "Foundations",
+          "Walls",
+          "Slabs & floors",
+          "Stairs",
+          "Other elements"
+        ]
+      }
+    },
+    "gallery": {
+      "systeme": {
+        "ceilingsSystem": "System ceilings",
+        "ceilingsGk": "Gypsum ceilings",
+        "ceilingsAcoustic": "Acoustic ceilings",
+        "ceilingsWood": "Wood & panel ceilings",
+        "wallsGk": "Gypsum partitions",
+        "wallsGlass": "Glass partitions"
+      },
+      "montasje": {
+        "doors": "Doors",
+        "balustrades": "Balustrades",
+        "facades": "Ventilated facades",
+        "windows": "Windows",
+        "kitchens": "Kitchen installations"
+      },
+      "snekker": {
+        "roof": "Roof structures",
+        "timber": "Timber installations",
+        "finish": "Wood finishes"
+      },
+      "betong": {
+        "foundations": "Foundations",
+        "walls": "Walls",
+        "slabs": "Slabs & floors",
+        "stairs": "Stairs",
+        "other": "Other elements"
       }
     },
 
     "why": {
-      "heading": "Why choose Valheimbygg?",
-      "lead": "We combine hands-on experience with clear communication and predictable progress.",
+      "heading": "Why choose Valheimbygg AS?",
+      "lead": "At Valheimbygg AS we prioritize solidity, transparency, and professionalism at every stage. We deliver construction projects for private and commercial clients, combining Scandinavian standards with many years of experience from Norway and Poland.",
       "items": {
-        "experience": "Several years of experience from small and medium-sized projects in Norway.",
-        "quality": "Focus on quality workmanship, proper materials and tidy job sites.",
-        "communication": "Clear communication throughout the project – you always know what is happening.",
-        "onTime": "Realistic planning and a strong focus on delivering on time."
+        "experience": "Experienced, qualified team — our staff includes civil engineers with higher education and technical specialists from Norwegian vocational schools (Fagskoleingeniør). We combine design knowledge with hands-on execution.",
+        "quality": "Top quality of workmanship and materials — we use certified materials from reputable manufacturers (e.g., Rigips, Knauf, Armstrong, Rockfon, Moelven) and follow installation standards precisely.",
+        "onTime": "Reliability and keeping agreements — we work with realistic schedules and full transparency throughout the project.",
+        "communication": "Continuous contact and good communication — we keep you informed about progress and key decisions, and provide technical guidance.",
+        "details": "Attention to detail — every project is handled individually with care and respect for architectural intent and investor expectations."
       }
     }
   },
@@ -68,6 +126,36 @@
     "error": "Something went wrong. Please try again or email biuro@nordbud.pl."
   },
   "footer": { "rights": "All rights reserved." },
+  "modal": {
+    "close": "Close",
+    "empty": "No photos to display yet."
+  },
+  "cookies": {
+    "title": "Wallpro respects your privacy",
+    "lead": "We use cookies to improve your browsing experience, show personalized ads or content, and analyze our traffic. By clicking \"Accept all\", you consent to our use of cookies.",
+    "reject": "Reject",
+    "acceptAll": "Accept all",
+    "customize": "Customize",
+    "prefsTitle": "Customize consent preferences",
+    "prefsLead": "Close",
+    "prefsText": "We use cookies to help you navigate efficiently and perform certain functions. You can find detailed information about all cookies under each consent category below. Cookies categorized as \"Necessary\" are stored in your browser as they are essential to enable the basic functions of the site.",
+    "more": "Show more",
+    "necessary": "Necessary",
+    "alwaysActive": "Always active",
+    "alwaysOn": "Always on",
+    "necessaryDesc": "Necessary cookies are essential for the basic functionality of the website, and the website cannot function properly without them. These cookies do not store any personally identifiable data.",
+    "functional": "Functional",
+    "functionalDesc": "Functional cookies help perform certain functions such as sharing content on social media platforms, collecting feedback, and other third‑party features.",
+    "analytics": "Analytics",
+    "analyticsDesc": "Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as number of visitors, bounce rate, traffic source, etc.",
+    "performance": "Performance",
+    "performanceDesc": "Performance cookies are used to understand and analyze the key performance indexes of the website which helps deliver a better user experience for visitors.",
+    "ads": "Advertising",
+    "adsDesc": "Advertising cookies are used to provide visitors with customized advertisements based on the pages you visited before and to analyze the effectiveness of ad campaigns.",
+    "unclassified": "Unclassified",
+    "unclassifiedDesc": "Other unclassified cookies are those that are being analyzed and have not been classified into a category yet.",
+    "save": "Save"
+  },
 
   "projects": {
   "heading": "Selected Projects",
@@ -76,20 +164,16 @@
   "close": "Close",
 
   "titles": {
-    "hala-magazynowa-gdansk": "Warehouse Hall – Gdańsk",
-    "dom-jednorodzinny-gdynia": "Single-Family House – Gdynia",
-    "remont-biura-sopot": "Office Renovation – Sopot"
+    "flakstad-skole": "Flakstad Skole",
+    "batsfjord-skole": "Båtsfjord Skole"
   },
 
   "details": {
-    "hala-magazynowa-gdansk": {
-      "description": "Construction of a warehouse hall with a steel structure, concrete flooring, and full façade finishing. The scope included groundwork, concrete works, and interior adaptation."
+    "flakstad-skole": {
+      "description": "Project photos from the Flakstad Skole realization."
     },
-    "dom-jednorodzinny-gdynia": {
-      "description": "A modern single-family house completed to a turnkey standard, featuring energy-efficient solutions and high-quality interior finishes."
-    },
-    "remont-biura-sopot": {
-      "description": "Complete renovation of an office space, including new surfaces, lighting, glass partitions, and custom-built functional work areas."
+    "batsfjord-skole": {
+      "description": "Project photos from the Båtsfjord Skole realization."
     }
   }
 }

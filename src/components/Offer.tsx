@@ -1,18 +1,101 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import GalleryModal from '@/components/GalleryModal'
 
 export default function Offer() {
   const { t } = useTranslation()
-  const [openKey, setOpenKey] = useState<string | null>(null)
+  const [openKeys, setOpenKeys] = useState<string[]>(['systeme'])
+  const [activeGallery, setActiveGallery] = useState<{
+    title: string
+    images: string[]
+  } | null>(null)
 
-  const serviceKeys = ['carpentry', 'renovation', 'concrete', 'roofFacade']
+  const serviceKeys = ['systeme', 'montasje', 'snekker', 'betong']
 
   const services = serviceKeys.map(key => ({
     key,
     title: t(`offer.services.${key}.title`),
     short: t(`offer.services.${key}.short`),
-    details: t(`offer.services.${key}.details`),
+    intro: t(`offer.services.${key}.detailsIntro`),
+    items: (t(`offer.services.${key}.items`, { returnObjects: true }) as string[]) || [],
   }))
+
+  const galleriesByService: Record<
+    string,
+    { key: string; label: string; images: string[] }[]
+  > = {
+    systeme: [
+      {
+        key: 'ceilings-system',
+        label: t('offer.gallery.systeme.ceilingsSystem'),
+        images: [
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467188/624157112_1522303939896291_1616043400929296165_n_ztvs35.jpg',
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467079/625848100_1427852935404853_8619980546053770923_n_kb8v7r.jpg',
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467081/624652392_1275157338012754_2085512793756346340_n_azvswy.jpg',
+        ],
+      },
+      {
+        key: 'ceilings-gk',
+        label: t('offer.gallery.systeme.ceilingsGk'),
+        images: [
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770485494/Rodzaje-profili-do-plyt-gipsowo-kartonowych.jpg_qx0yoz.webp',
+        ],
+      },
+      {
+        key: 'ceilings-acoustic',
+        label: t('offer.gallery.systeme.ceilingsAcoustic'),
+        images: [
+        
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467187/624630076_885245020776075_8036395950518381393_n_nwrvdw.jpg',
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/626317564_904669808696397_8396978757215254469_n_juckrn.jpg',
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/623828746_1991382111416859_2751002747916170571_n_kga1r4.jpg',
+        ],
+      },
+      {
+        key: 'ceilings-wood',
+        label: t('offer.gallery.systeme.ceilingsWood'),
+        images: [
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770467081/624652392_1275157338012754_2085512793756346340_n_azvswy.jpg',
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770466952/623879116_1772609086753118_1248088909984247369_n_vv8uqx.jpg',
+        ],
+      },
+      {
+        key: 'walls-gk',
+        label: t('offer.gallery.systeme.wallsGk'),
+        images: [
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770486464/44_195717012.jpg_itkhqb.jxl',
+        ],
+      },
+      {
+        key: 'walls-glass',
+        label: t('offer.gallery.systeme.wallsGlass'),
+        images: [
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770487956/Innvendige-glassvegger-kontorvegger-5_to57nu.jpg',
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770487943/Innvendige-glassvegger-kontorvegger-3-1-1_srtpcg.jpg',
+          'https://res.cloudinary.com/dioua8akg/image/upload/v1770466781/glasvegg_cba7iv.jpg',
+        ],
+      },
+    ],
+    montasje: [
+      { key: 'doors', label: t('offer.gallery.montasje.doors'), images: [] },
+      { key: 'balustrades', label: t('offer.gallery.montasje.balustrades'), images: [] },
+      { key: 'facades', label: t('offer.gallery.montasje.facades'), images: [] },
+      { key: 'windows', label: t('offer.gallery.montasje.windows'), images: [] },
+      { key: 'kitchens', label: t('offer.gallery.montasje.kitchens'), images: [] },
+    ],
+    snekker: [
+      { key: 'roof', label: t('offer.gallery.snekker.roof'), images: [] },
+      { key: 'timber', label: t('offer.gallery.snekker.timber'), images: [] },
+      { key: 'finish', label: t('offer.gallery.snekker.finish'), images: [] },
+    ],
+    betong: [
+      { key: 'foundations', label: t('offer.gallery.betong.foundations'), images: [] },
+      { key: 'walls', label: t('offer.gallery.betong.walls'), images: [] },
+      { key: 'slabs', label: t('offer.gallery.betong.slabs'), images: [] },
+      { key: 'stairs', label: t('offer.gallery.betong.stairs'), images: [] },
+      { key: 'other', label: t('offer.gallery.betong.other'), images: [] },
+    ],
+  }
 
   const reasonsKeys = ['experience', 'quality', 'communication', 'onTime']
   const reasons = reasonsKeys.map(key => ({
@@ -21,7 +104,9 @@ export default function Offer() {
   }))
 
   const toggle = (key: string) => {
-    setOpenKey(prev => (prev === key ? null : key))
+    setOpenKeys(prev =>
+      prev.includes(key) ? prev.filter(k => k !== key) : [...prev, key]
+    )
   }
 
   return (
@@ -32,9 +117,10 @@ export default function Offer() {
       </header>
 
       {/* LISTA USŁUG */}
-      <div className="mt-8 grid gap-6 md:grid-cols-2">
+      <div className="mt-8 grid gap-6">
         {services.map(s => {
-          const isOpen = openKey === s.key
+          const isOpen = openKeys.includes(s.key)
+          const galleries = galleriesByService[s.key] ?? []
 
           return (
             <article
@@ -44,11 +130,7 @@ export default function Offer() {
                 hover:-translate-y-1 hover:shadow-lg hover:border-brand-400
               "
             >
-              <button
-                type="button"
-                onClick={() => toggle(s.key)}
-                className="flex w-full flex-col items-stretch text-left p-5 sm:p-6"
-              >
+              <div className="flex w-full flex-col items-stretch text-left p-5 sm:p-6">
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">
@@ -59,30 +141,73 @@ export default function Offer() {
                     </p>
                   </div>
 
-                  {/* NOWA IKONA + / - */}
-                  <span
-                    aria-hidden="true"
+                  {/* IKONA + / - (tylko ona przełącza) */}
+                  <button
+                    type="button"
+                    onClick={() => toggle(s.key)}
+                    aria-label={isOpen ? 'Collapse' : 'Expand'}
                     className="
-                      flex h-7 w-7 items-center justify-center rounded-full border
-                      text-lg font-bold text-brand-600
-                      transition-all duration-300
+                      flex h-7 w-7 items-center justify-center rounded-full border border-gray-300
+                      text-lg font-bold text-white transition-all duration-300
                     "
+                    style={{ backgroundColor: isOpen ? '#c0392b' : 'var(--color-brand-600)' }}
                   >
                     {isOpen ? '−' : '+'}
-                  </span>
+                  </button>
                 </div>
 
                 {/* rozwinięcie */}
                 {isOpen && (
-                  <p
-                    className="
-                      mt-4 text-sm text-gray-700 animate-fadeIn
-                    "
-                  >
-                    {s.details}
-                  </p>
+                  <>
+                    {s.intro && (
+                      <p
+                        className="
+                          mt-4 text-sm text-gray-700 animate-fadeIn
+                        "
+                      >
+                        {s.intro}
+                      </p>
+                    )}
+                    <div className="mt-4">
+                      <p className="mb-2 text-sm font-semibold text-gray-800">
+                        {t('offer.scope')}
+                      </p>
+                      <ul className="grid gap-2">
+                        {galleries.map((g, idx) => (
+                          <li
+                            key={g.key}
+                            className="flex items-start justify-between gap-3 rounded-lg border bg-white/70 px-3 py-2"
+                          >
+                            <span className="text-sm text-gray-800">
+                              • {s.items[idx] ?? g.label}
+                            </span>
+                          <button
+                            type="button"
+                            onClick={() => setActiveGallery({ title: g.label, images: g.images })}
+                            className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-brand-600 hover:bg-gray-50"
+                            aria-label={g.label}
+                          >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="1.8"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="h-4 w-4"
+                              >
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3l2-2h8l2 2h3a2 2 0 0 1 2 2z" />
+                                <circle cx="12" cy="13" r="3.5" />
+                              </svg>
+                            </button>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </>
                 )}
-              </button>
+              </div>
             </article>
           )
         })}
@@ -99,12 +224,21 @@ export default function Offer() {
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">
           {reasons.map(r => (
             <li key={r.key} className="flex items-start gap-2 text-sm text-gray-800">
-              <span className="mt-[6px] h-2.5 w-2.5 rounded-full bg-brand-500" />
+              <span className="mt-[6px] h-2.5 w-2.5 shrink-0 rounded-full bg-brand-500" />
               <span>{r.text}</span>
             </li>
           ))}
         </ul>
       </section>
+
+      <GalleryModal
+        isOpen={!!activeGallery}
+        title={activeGallery?.title ?? ''}
+        images={activeGallery?.images ?? []}
+        closeLabel={t('modal.close')}
+        emptyLabel={t('modal.empty')}
+        onClose={() => setActiveGallery(null)}
+      />
     </section>
   )
 }

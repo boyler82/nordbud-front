@@ -1,10 +1,17 @@
-export default function Logo() {
+type LogoProps = {
+  height?: number
+}
+
+export default function Logo({ height = 90 }: LogoProps) {
   return (
-    <div className="flex items-center gap-2">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-        <path d="M3 12L12 3l9 9-1.5 1.5L12 6l-7.5 7.5L3 12zm2 4l7-7 7 7v3H5v-3z" />
-      </svg>
-      <span className="font-bold tracking-wide">Valheimbygg AS</span>
+    <div className="flex items-center gap-3">
+      <img
+        src="https://res.cloudinary.com/dioua8akg/image/upload/v1770477511/valheim_logo_main_s07pam.svg"
+        alt="Valheimbygg AS"
+        style={{ height }}
+        className="w-auto"
+        decoding="async"
+      />
     </div>
   )
 }
