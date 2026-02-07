@@ -51,7 +51,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Obrazek / pokaz slajdów */}
         <div className="relative mt-6 md:mt-0 overflow-hidden rounded-2xl border shadow-sm">
           {images.map((src, i) => (
             <img
