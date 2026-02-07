@@ -89,7 +89,7 @@ export default function CookieConsent() {
   }
 
   const handleSavePrefs = () => {
-    const payload = { ...prefs, necessary: true }
+    const payload: Prefs = { ...prefs, necessary: true }
     setPrefs(payload)
     saveStored('custom', payload)
     setIsOpen(false)
