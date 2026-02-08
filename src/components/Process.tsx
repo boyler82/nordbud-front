@@ -94,17 +94,25 @@ export default function Process() {
   )
 
   const content = (compact: boolean) => (
-    <div className={`rounded-3xl border bg-white/60 backdrop-blur ${compact ? 'px-4 py-3 sm:px-5 sm:py-4' : 'p-6 sm:p-8'}`}>
+    <div
+      className={`rounded-3xl border bg-white/60 backdrop-blur ${
+        compact ? 'px-2.5 py-3 sm:px-5 sm:py-4' : 'p-6 sm:p-8'
+      }`}
+    >
       {renderHeader(compact)}
 
       <div className={`relative ${compact ? 'mt-2' : 'mt-8'}`}>
         <div
-          className="process-line hidden md:block absolute left-6 right-6 top-4 h-px"
+          className={`process-line absolute left-4 right-4 top-4 h-px ${compact ? '' : 'hidden md:block'}`}
           style={{
             ['--process-progress' as any]: `${Math.max(0, (activeIndex + 1) / steps.length) * 100}%`,
           }}
         />
-        <ol className={`grid ${compact ? 'gap-3 md:gap-4' : 'gap-6'} md:grid-cols-5`}>
+        <ol
+          className={`grid ${
+            compact ? 'grid-cols-5 gap-2' : 'gap-6 sm:grid-cols-2 md:grid-cols-5'
+          }`}
+        >
           {steps.map((step, i) => {
             const isActive = i <= activeIndex
             const title = t(`process.steps.${step.key}.title`)
@@ -114,16 +122,33 @@ export default function Process() {
               : ''
 
             return (
-            <li key={step.key} className="flex flex-col items-center text-center">
-              <div className={`process-dot relative z-10 flex items-center justify-center rounded-full border bg-white shadow-sm ${compact ? 'h-6 w-6' : 'h-8 w-8'} ${isActive ? 'process-dot-active' : ''}`}>
+            <li
+              key={step.key}
+              className={`flex flex-col ${
+                compact
+                  ? 'items-center text-center'
+                  : 'items-start text-left sm:items-center sm:text-center'
+              }`}
+            >
+              <div
+                className={`process-dot relative z-10 flex items-center justify-center rounded-full border bg-white shadow-sm ${
+                  compact ? 'h-5 w-5 sm:h-6 sm:w-6' : 'h-8 w-8'
+                } ${isActive ? 'process-dot-active' : ''}`}
+              >
                 <span className={`process-fill ${isActive ? 'process-fill-active' : ''}`} aria-hidden />
                 <Check
-                  className={`process-check text-brand-700 ${compact ? 'h-3 w-3' : 'h-4 w-4'}`}
+                  className={`process-check text-brand-700 ${
+                    compact ? 'h-2.5 w-2.5 sm:h-3 sm:w-3' : 'h-4 w-4'
+                  }`}
                   style={{ animationDelay: `${i * 120}ms` }}
                   aria-hidden
                 />
               </div>
-              <div className={`text-sm font-semibold text-gray-800 ${compact ? 'mt-2' : 'mt-3'}`}>
+              <div
+                className={`font-semibold text-gray-800 ${
+                  compact ? 'mt-1 text-[clamp(0.55rem,2.2vw,0.8rem)]' : 'mt-3 text-sm'
+                }`}
+              >
                 {title}
               </div>
               {!compact && (
@@ -172,8 +197,10 @@ export default function Process() {
         {!isPinned && content(false)}
       </section>
       {isPinned && (
-        <div className={`fixed bottom-4 left-0 right-0 z-50 transition-all duration-300 ease-out ${isUnpinning ? 'process-unpin' : ''}`}>
-          <div className="mx-auto max-w-6xl px-4">
+        <div
+          className={`fixed bottom-4 left-0 right-0 z-50 transition-all duration-300 ease-out ${isUnpinning ? 'process-unpin' : ''}`}
+        >
+          <div className="mx-auto max-w-6xl px-2 sm:px-4">
             {content(true)}
           </div>
         </div>
