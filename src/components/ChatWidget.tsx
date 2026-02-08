@@ -203,6 +203,10 @@ export default function ChatWidget() {
     pushBot(next.text)
   }
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+  }
+
   useEffect(() => {
     if (!isOpen) return
     endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' })

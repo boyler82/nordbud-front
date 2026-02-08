@@ -246,7 +246,6 @@ export default function Projects() {
               const description = t(
                 `projects.details.${selectedProject.slug}.description`
               )
-              const typeLabel = typeLabels[selectedProject.type]
               const location = selectedProject.location
 
               return (
