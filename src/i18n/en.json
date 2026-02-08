@@ -189,6 +189,39 @@
       "description": "Project photos from the Båtsfjord Skole realization."
     }
   }
-}
+  }
 
+,
+  "process": {
+    "title": "Process",
+    "lead": "A clear and predictable process from first contact to delivery.",
+    "promise": "Free site visit – reply within 24h.",
+    "local": "We work in Tromsø and the surrounding area.",
+    "more": "Show more",
+    "less": "Hide",
+    "steps": {
+      "befaring": {
+        "title": "Site Visit",
+        "summary": "Free site visit and needs assessment."
+      },
+      "tilbud": {
+        "title": "Offer",
+        "summary": "You receive a clear price estimate.",
+        "details": "We explain what is included and suggest good alternatives."
+      },
+      "planlegging": {
+        "title": "Planning",
+        "summary": "We agree on the schedule and materials."
+      },
+      "utforelse": {
+        "title": "Execution",
+        "summary": "Neat work and ongoing updates.",
+        "details": "Single point of contact and clear milestones throughout."
+      },
+      "ferdigstillelse": {
+        "title": "Completion",
+        "summary": "Final inspection and handover."
+      }
+    }
+  }
 }

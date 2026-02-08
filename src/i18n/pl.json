@@ -169,22 +169,54 @@
       "glassPartitions": "Photo of glass partitions"
     }
   },
-    "projects": {
-  "heading": "Wybrane realizacje",
-  "subtitle": "Kilka przykładowych realizacji dla klientów prywatnych i firm.",
-  "viewAria": "Zobacz więcej o projekcie {{title}}",
-  "close": "Zamknij",
-  "titles": {
-    "flakstad-skole": "Flakstad Skole",
-    "batsfjord-skole": "Båtsfjord Skole"
-  },
-  "details": {
-    "flakstad-skole": {
-      "description": "Zdjęcia z realizacji projektu Flakstad Skole."
+  "projects": {
+    "heading": "Wybrane realizacje",
+    "subtitle": "Kilka przykładowych realizacji dla klientów prywatnych i firm.",
+    "viewAria": "Zobacz więcej o projekcie {{title}}",
+    "close": "Zamknij",
+    "titles": {
+      "flakstad-skole": "Flakstad Skole",
+      "batsfjord-skole": "Båtsfjord Skole"
     },
-    "batsfjord-skole": {
-      "description": "Zdjęcia z realizacji projektu Båtsfjord Skole."
+    "details": {
+      "flakstad-skole": {
+        "description": "Zdjęcia z realizacji projektu Flakstad Skole."
+      },
+      "batsfjord-skole": {
+        "description": "Zdjęcia z realizacji projektu Båtsfjord Skole."
+      }
+    }
+  },
+  "process": {
+    "title": "Proces",
+    "lead": "Jasny i przewidywalny proces od pierwszego kontaktu do odbioru.",
+    "promise": "Bezpłatna wizyta – odpowiedź w 24h.",
+    "local": "Działamy w Tromsø i okolicy.",
+    "more": "Pokaż więcej",
+    "less": "Ukryj",
+    "steps": {
+      "befaring": {
+        "title": "Befaring",
+        "summary": "Bezpłatna wizyta i określenie potrzeb."
+      },
+      "tilbud": {
+        "title": "Oferta",
+        "summary": "Otrzymasz jasną wycenę.",
+        "details": "Wyjaśniamy zakres i proponujemy dobre rozwiązania."
+      },
+      "planlegging": {
+        "title": "Planowanie",
+        "summary": "Ustalamy harmonogram i materiały."
+      },
+      "utforelse": {
+        "title": "Realizacja",
+        "summary": "Porządna praca i bieżące aktualizacje.",
+        "details": "Stały kontakt i jasne kamienie milowe."
+      },
+      "ferdigstillelse": {
+        "title": "Zakończenie",
+        "summary": "Kontrola i przekazanie."
+      }
     }
   }
-}
 }

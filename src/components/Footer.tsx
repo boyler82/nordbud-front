@@ -10,7 +10,13 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-6xl px-4">
         <div className="mb-6 rounded-2xl border bg-white/70 px-4 py-5 shadow-sm">
           <div className="flex flex-wrap items-center justify-center gap-3">
-          <a href="#" aria-label="Facebook" className="inline-flex h-14 w-14 items-center justify-center rounded-full border transition hover:bg-gray-50 hover:scale-105">
+          <a
+            href="https://www.facebook.com/profile.php?id=61587799199529"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-full border transition hover:bg-gray-50 hover:scale-105"
+          >
             <img
               src="https://api.iconify.design/simple-icons/facebook.svg?color=%231877F2"
               alt=""

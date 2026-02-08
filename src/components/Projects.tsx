@@ -1,14 +1,34 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import {
+  GraduationCap,
+  Hospital,
+  Briefcase,
+  Home,
+  Building2,
+  Store,
+  Shapes,
+} from 'lucide-react'
 
 // jeśli później zrobisz osobne podstrony, można wrócić do <Link>
 // na razie użyjemy <button>, żeby otwierać modal
 // import { Link } from 'react-router-dom'
 
+type ProjectType =
+  | 'education'
+  | 'hospital'
+  | 'office'
+  | 'house'
+  | 'apartment'
+  | 'shop'
+  | 'other'
+
 type Project = {
   slug: string
   img: string          // miniaturka na liście
   gallery: string[]    // pełna galeria w modalu
+  type: ProjectType
+  location: string
 }
 
 function ImageWithLoader({
@@ -40,6 +60,16 @@ function ImageWithLoader({
   )
 }
 
+const typeIcons: Record<ProjectType, React.ElementType> = {
+  education: GraduationCap,
+  hospital: Hospital,
+  office: Briefcase,
+  house: Home,
+  apartment: Building2,
+  shop: Store,
+  other: Shapes,
+}
+
 const data: Project[] = [
   {
     slug: 'flakstad-skole',
@@ -53,6 +83,8 @@ const data: Project[] = [
       'https://res.cloudinary.com/dioua8akg/image/upload/v1770466952/623879116_1772609086753118_1248088909984247369_n_vv8uqx.jpg',
       'https://res.cloudinary.com/dioua8akg/image/upload/v1770466821/623806300_1263113015691006_8552080892317088751_n_e9t7b6.jpg',
     ],
+    type: 'education',
+    location: 'Flakstad',
   },
   {
     slug: 'batsfjord-skole',
@@ -70,6 +102,8 @@ const data: Project[] = [
       'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/626317564_904669808696397_8396978757215254469_n_juckrn.jpg',
       'https://res.cloudinary.com/dioua8akg/image/upload/v1770467185/623828746_1991382111416859_2751002747916170571_n_kga1r4.jpg',
     ],
+    type: 'education',
+    location: 'Båtsfjord',
   },
   // ...dodaj kolejne realizacje (slug, img, gallery)
 ]
@@ -118,47 +152,68 @@ export default function Projects() {
   return (
     <>
       <section id="realizacje" className="mx-auto max-w-6xl px-4 py-10 sm:py-12">
-        <div className="mb-6 flex items-end justify-between">
-          <div>
-            <h2 className="text-2xl font-bold">{t('projects.heading')}</h2>
-            <p className="mt-2 text-gray-600 text-sm sm:text-base">
-              {t('projects.subtitle')}
-            </p>
+        <div className="rounded-3xl border bg-white/60 backdrop-blur p-6 sm:p-8">
+          <div className="mb-6 flex items-end justify-between">
+            <div>
+              <h2 className="reveal text-2xl font-bold">{t('projects.heading')}</h2>
+              <p className="reveal reveal-delay-1 mt-2 text-gray-600 text-sm sm:text-base">
+                {t('projects.subtitle')}
+              </p>
+            </div>
+            <div className="hidden md:flex items-center gap-2" />
           </div>
-          <div className="hidden md:flex items-center gap-2" />
-        </div>
 
-        <div className="no-scrollbar relative overflow-hidden">
-          <div
-            className="marquee-track flex gap-4 hover:[animation-play-state:paused]"
-            style={{ ['--marquee-shift' as any]: `${100 / repeatCount}%` }}
-          >
-            {looped.map((p, i) => {
-            const title = t(`projects.titles.${p.slug}`)
-            const aria = t('projects.viewAria', { title })
+          <div className="reveal reveal-delay-2 no-scrollbar relative overflow-x-hidden overflow-y-visible pt-2">
+            <div
+              className="marquee-track flex gap-4 hover:[animation-play-state:paused]"
+              style={{ ['--marquee-shift' as any]: `${100 / repeatCount}%` }}
+            >
+              {looped.map((p, i) => {
+              const title = t(`projects.titles.${p.slug}`)
+              const aria = t('projects.viewAria', { title })
+            const Icon = typeIcons[p.type]
+            const altBase = `${title} — ${p.location}`
 
             return (
               <article
                 key={`${p.slug}-${i}`}
                 data-card
-                className="shrink-0 w-[280px] overflow-hidden rounded-2xl border shadow-sm bg-white"
+                className="group relative shrink-0 w-[280px] overflow-hidden rounded-2xl border shadow-sm bg-white transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand-400"
               >
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  style={{
+                    background:
+                      'radial-gradient(320px 200px at 15% 0%, rgba(110,143,102,0.25), transparent 70%)',
+                  }}
+                />
                 <button
                   type="button"
                   onClick={() => handleOpen(p.slug)}
                   aria-label={aria}
                   className="block w-full text-left"
                 >
-                  <ImageWithLoader
-                    src={p.img}
-                    alt={title}
-                    className="aspect-[3/2] w-full object-cover"
-                  />
-                  <div className="p-3 text-sm text-gray-700">{title}</div>
+                  <div className="relative">
+                    <ImageWithLoader
+                      src={p.img}
+                      alt={altBase}
+                      className="aspect-[3/2] w-full object-cover"
+                    />
+                    <div className="absolute inset-x-0 top-0 bg-white/85 backdrop-blur px-3 py-2 text-center text-sm font-semibold tracking-wide text-gray-800">
+                      <span className="inline-flex items-center justify-center gap-2">
+                        <Icon className="h-4 w-4 text-brand-700" aria-hidden />
+                        <span>{title}</span>
+                      </span>
+                    </div>
+                    <div className="absolute inset-x-0 bottom-0 bg-white/75 backdrop-blur px-3 py-2 text-center text-xs text-gray-700">
+                      <span>{p.location}</span>
+                    </div>
+                  </div>
                 </button>
               </article>
             )
           })}
+            </div>
           </div>
         </div>
       </section>
@@ -191,6 +246,8 @@ export default function Projects() {
               const description = t(
                 `projects.details.${selectedProject.slug}.description`
               )
+              const typeLabel = typeLabels[selectedProject.type]
+              const location = selectedProject.location
 
               return (
                 <>
@@ -207,11 +264,12 @@ export default function Projects() {
             <div className="grid gap-3 sm:grid-cols-2">
               {selectedProject.gallery.map((src, idx) => {
                 const title = t(`projects.titles.${selectedProject.slug}`)
+                const location = selectedProject.location
                 return (
                   <ImageWithLoader
                     key={idx}
                     src={src}
-                    alt={`${title} ${idx + 1}`}
+                    alt={`${title} — ${location} — ${idx + 1}`}
                     className="w-full rounded-lg object-cover"
                   />
                 )

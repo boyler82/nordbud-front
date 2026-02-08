@@ -34,7 +34,7 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "ConstructionCompany"],
         "name": "Valheimbygg AS",
         "url": "https://www.valheimbygg.no/",
         "email": "post@valheimbygg.no",
@@ -46,9 +46,29 @@
           "addressLocality": "Krokelvdalen",
           "addressCountry": "NO"
         },
-        "areaServed": "NO",
-        "description": "Tømrerarbeid, rehabilitering, betong og fasader.",
-        "sameAs": []
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Tromsø"
+          },
+          "Tromsø og nærområdet"
+        ],
+        "description": "Tømrerarbeid, rehabilitering, betong, montering av tak, vegger og gulv.",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Tjenester",
+          "itemListElement": [
+            { "@type": "Service", "name": "Montering av tak og himlinger" },
+            { "@type": "Service", "name": "Vegger og glassvegger" },
+            { "@type": "Service", "name": "Gulv og innvendige arbeider" },
+            { "@type": "Service", "name": "Tømrerarbeid" },
+            { "@type": "Service", "name": "Betongarbeid" },
+            { "@type": "Service", "name": "Rehabilitering" }
+          ]
+        },
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61587799199529"
+        ]
       }
     </script>
     <style>html{scroll-behavior:smooth}</style>

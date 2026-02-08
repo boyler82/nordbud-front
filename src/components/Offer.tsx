@@ -4,7 +4,7 @@ import GalleryModal from '@/components/GalleryModal'
 
 export default function Offer() {
   const { t } = useTranslation()
-  const [openKeys, setOpenKeys] = useState<string[]>(['systeme'])
+  const [openKeys, setOpenKeys] = useState<string[]>([])
   const [activeGallery, setActiveGallery] = useState<{
     title: string
     items: { src: string; alt: string }[]
@@ -161,125 +161,127 @@ export default function Offer() {
 
   return (
     <section id="oferta" className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-      <header className="max-w-3xl">
-        <h2 className="text-2xl sm:text-3xl font-bold">{t('offer.heading')}</h2>
-        <p className="mt-3 text-sm sm:text-base text-gray-600">{t('offer.lead')}</p>
-      </header>
+      <div className="rounded-3xl border bg-white/60 backdrop-blur p-6 sm:p-8">
+        <header className="max-w-3xl">
+          <h2 className="text-2xl sm:text-3xl font-bold">{t('offer.heading')}</h2>
+          <p className="mt-3 text-sm sm:text-base text-gray-600">{t('offer.lead')}</p>
+        </header>
 
-      {/* LISTA USŁUG */}
-      <div className="mt-8 grid gap-6">
-        {services.map(s => {
-          const isOpen = openKeys.includes(s.key)
-          const galleries = galleriesByService[s.key] ?? []
+        {/* LISTA USŁUG */}
+        <div className="mt-8 grid gap-6">
+          {services.map(s => {
+            const isOpen = openKeys.includes(s.key)
+            const galleries = galleriesByService[s.key] ?? []
 
-          return (
-            <article
-              key={s.key}
-              className="
-                rounded-2xl border bg-white/80 shadow-sm transition
-                hover:-translate-y-1 hover:shadow-lg hover:border-brand-400
-              "
-            >
-              <div className="flex w-full flex-col items-stretch text-left p-5 sm:p-6">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      {s.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-gray-600">
-                      {s.short}
-                    </p>
+            return (
+              <article
+                key={s.key}
+                className="
+                  rounded-2xl border bg-white/80 shadow-sm transition
+                  hover:-translate-y-1 hover:shadow-lg hover:border-brand-400
+                "
+              >
+                <div className="flex w-full flex-col items-stretch text-left p-5 sm:p-6">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        {s.title}
+                      </h3>
+                      <p className="mt-2 text-sm text-gray-600">
+                        {s.short}
+                      </p>
+                    </div>
+
+                    {/* IKONA + / - (tylko ona przełącza) */}
+                    <button
+                      type="button"
+                      onClick={() => toggle(s.key)}
+                      aria-label={isOpen ? 'Collapse' : 'Expand'}
+                      className="
+                        flex h-7 w-7 items-center justify-center rounded-full border border-gray-300
+                        text-lg font-bold text-white transition-all duration-300
+                      "
+                      style={{ backgroundColor: isOpen ? '#c0392b' : 'var(--color-brand-600)' }}
+                    >
+                      {isOpen ? '−' : '+'}
+                    </button>
                   </div>
 
-                  {/* IKONA + / - (tylko ona przełącza) */}
-                  <button
-                    type="button"
-                    onClick={() => toggle(s.key)}
-                    aria-label={isOpen ? 'Collapse' : 'Expand'}
-                    className="
-                      flex h-7 w-7 items-center justify-center rounded-full border border-gray-300
-                      text-lg font-bold text-white transition-all duration-300
-                    "
-                    style={{ backgroundColor: isOpen ? '#c0392b' : 'var(--color-brand-600)' }}
-                  >
-                    {isOpen ? '−' : '+'}
-                  </button>
-                </div>
-
-                {/* rozwinięcie */}
-                {isOpen && (
-                  <>
-                    {s.intro && (
-                      <p
-                        className="
-                          mt-4 text-sm text-gray-700 animate-fadeIn
-                        "
-                      >
-                        {s.intro}
-                      </p>
-                    )}
-                    <div className="mt-4">
-                      <p className="mb-2 text-sm font-semibold text-gray-800">
-                        {t('offer.scope')}
-                      </p>
-                      <ul className="grid gap-2">
-                        {galleries.map((g, idx) => (
-                          <li
-                            key={g.key}
-                            className="flex items-start justify-between gap-3 rounded-lg border bg-white/70 px-3 py-2"
-                          >
-                            <span className="text-sm text-gray-800">
-                              • {s.items[idx] ?? g.label}
-                            </span>
-                          <button
-                            type="button"
-                          onClick={() => setActiveGallery({ title: g.label, items: g.items })}
-                            className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-brand-600 hover:bg-gray-50"
-                            aria-label={g.label}
-                          >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.8"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                className="h-4 w-4"
+                  {/* rozwinięcie */}
+                  {isOpen && (
+                    <>
+                      {s.intro && (
+                        <p
+                          className="
+                            mt-4 text-sm text-gray-700 animate-fadeIn
+                          "
+                        >
+                          {s.intro}
+                        </p>
+                      )}
+                      <div className="mt-4">
+                        <p className="mb-2 text-sm font-semibold text-gray-800">
+                          {t('offer.scope')}
+                        </p>
+                        <ul className="grid gap-2">
+                          {galleries.map((g, idx) => (
+                            <li
+                              key={g.key}
+                              className="flex items-start justify-between gap-3 rounded-lg border bg-white/70 px-3 py-2"
+                            >
+                              <span className="text-sm text-gray-800">
+                                • {s.items[idx] ?? g.label}
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => setActiveGallery({ title: g.label, items: g.items })}
+                                className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-brand-600 hover:bg-gray-50"
+                                aria-label={g.label}
                               >
-                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3l2-2h8l2 2h3a2 2 0 0 1 2 2z" />
-                                <circle cx="12" cy="13" r="3.5" />
-                              </svg>
-                            </button>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </>
-                )}
-              </div>
-            </article>
-          )
-        })}
-      </div>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="1.8"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  className="h-4 w-4"
+                                >
+                                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3l2-2h8l2 2h3a2 2 0 0 1 2 2z" />
+                                  <circle cx="12" cy="13" r="3.5" />
+                                </svg>
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </article>
+            )
+          })}
+        </div>
 
-      {/* DLACZEGO MY */}
-      <section className="mt-10 rounded-2xl border bg-white/80 p-5 sm:p-6 shadow-sm">
-        <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
-          {t('offer.why.heading')}
-        </h3>
-        <p className="mt-2 text-sm sm:text-base text-gray-600">
-          {t('offer.why.lead')}
-        </p>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-          {reasons.map(r => (
-            <li key={r.key} className="flex items-start gap-2 text-sm text-gray-800">
-              <span className="mt-[6px] h-2.5 w-2.5 shrink-0 rounded-full bg-brand-500" />
-              <span>{r.text}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
+        {/* DLACZEGO MY */}
+        <section className="mt-10 rounded-2xl border bg-white/80 p-5 sm:p-6 shadow-sm">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
+            {t('offer.why.heading')}
+          </h3>
+          <p className="mt-2 text-sm sm:text-base text-gray-600">
+            {t('offer.why.lead')}
+          </p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {reasons.map(r => (
+              <li key={r.key} className="flex items-start gap-2 text-sm text-gray-800">
+                <span className="mt-[6px] h-2.5 w-2.5 shrink-0 rounded-full bg-brand-500" />
+                <span>{r.text}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
 
       <GalleryModal
         isOpen={!!activeGallery}

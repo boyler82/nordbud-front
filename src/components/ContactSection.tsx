@@ -61,25 +61,26 @@ export default function ContactSection() {
 
   return (
     <section id="kontakt" className="mx-auto max-w-3xl px-4 py-16">
-      <h1 className="text-3xl font-bold">{t("contact.heading")}</h1>
-      <p className="mt-4 text-gray-600">
-        {t("contact.emailText")}{" "}
-        <a href="mailto:post@valheimbygg.no" className="text-brand-600">
-          post@valheimbygg.no
-        </a>
-      </p>
-      <p className="mt-2 text-gray-600">
-        {t("contact.phoneText")}{" "}
-        <a href="tel:+4747729371" className="text-brand-600">
-          +47 477 293 71
-        </a>
-      </p>
-      <p className="mt-2 text-gray-600">
-        {t("contact.addressText")}{" "}
-        <span>Vårvegen 3, 9023 Krokelvdalen</span>
-      </p>
+      <div className="rounded-3xl border bg-white/60 backdrop-blur p-6 sm:p-8">
+        <h1 className="text-3xl font-bold">{t("contact.heading")}</h1>
+        <p className="mt-4 text-gray-600">
+          {t("contact.emailText")}{" "}
+          <a href="mailto:post@valheimbygg.no" className="text-brand-600">
+            post@valheimbygg.no
+          </a>
+        </p>
+        <p className="mt-2 text-gray-600">
+          {t("contact.phoneText")}{" "}
+          <a href="tel:+4747729371" className="text-brand-600">
+            +47 477 293 71
+          </a>
+        </p>
+        <p className="mt-2 text-gray-600">
+          {t("contact.addressText")}{" "}
+          <span>Vårvegen 3, 9023 Krokelvdalen</span>
+        </p>
 
-      <form onSubmit={handleSubmit} className="mt-8 grid gap-4" noValidate>
+        <form onSubmit={handleSubmit} className="mt-8 grid gap-4" noValidate>
         <input
           name="name"
           placeholder={t("contact.name")!}
@@ -147,7 +148,8 @@ export default function ContactSection() {
         {status === "error" && (
           <p className="text-sm text-red-700">{t("contact.error")}</p>
         )}
-      </form>
+        </form>
+      </div>
     </section>
   );
 }

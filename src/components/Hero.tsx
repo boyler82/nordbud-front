@@ -11,6 +11,7 @@ export default function Hero() {
     'https://res.cloudinary.com/dioua8akg/image/upload/v1770466765/batsfiord_holl_rbwlyj.jpg',
   ]
   const [activeIndex, setActiveIndex] = useState(0)
+  const [parallaxY, setParallaxY] = useState(0)
 
   useEffect(() => {
     const id = window.setInterval(() => {
@@ -19,23 +20,41 @@ export default function Hero() {
     return () => window.clearInterval(id)
   }, [images.length])
 
+  useEffect(() => {
+    let raf = 0
+    const onScroll = () => {
+      if (raf) return
+      raf = window.requestAnimationFrame(() => {
+        const y = Math.min(window.scrollY, 300)
+        setParallaxY(y * 0.08)
+        raf = 0
+      })
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      if (raf) window.cancelAnimationFrame(raf)
+    }
+  }, [])
+
   return (
     <section
       id="start"
       className="mx-auto max-w-6xl px-4 py-10 sm:py-14 md:py-20 -translate-y-[30px]"
     >
-      <div className="grid gap-8 md:gap-10 md:grid-cols-2 md:items-center">
-        {/* Tekst */}
-        <div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
-            {t('hero.title')}
-          </h1>
+      <div className="grid gap-8 md:gap-10 md:grid-cols-2">
+        <h1 className="reveal md:col-span-2 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-center md:text-left">
+          {t('hero.title')}
+        </h1>
 
-          <p className="mt-4 whitespace-pre-line text-base sm:text-lg text-gray-600">
+        {/* Opis i CTA */}
+        <div className="md:pr-2">
+          <p className="reveal reveal-delay-1 whitespace-pre-line text-base sm:text-lg text-gray-600">
             {t('hero.subtitle')}
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:flex-wrap sm:items-center">
+          <div className="reveal reveal-delay-2 mt-8 flex flex-col sm:flex-row gap-3 sm:flex-wrap sm:items-center">
             <a
               href="#oferta"
               className="inline-flex w-full justify-center items-center rounded-xl bg-brand-500 px-4 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-600 whitespace-normal break-words sm:w-auto sm:px-5 sm:py-3 sm:text-base"
@@ -51,7 +70,24 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mt-6 md:mt-0 overflow-hidden rounded-2xl border shadow-sm">
+        {/* Slider */}
+        <div
+          className="reveal reveal-delay-3 group relative overflow-hidden rounded-2xl border shadow-sm bg-white/70 backdrop-blur transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand-400"
+          style={{ transform: `translateY(${parallaxY}px)` }}
+        >
+          <div className="pointer-events-none absolute inset-0">
+            <span className="hero-frame-corner hero-frame-tl" />
+            <span className="hero-frame-corner hero-frame-tr" />
+            <span className="hero-frame-corner hero-frame-bl" />
+            <span className="hero-frame-corner hero-frame-br" />
+          </div>
+          <div
+            className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            style={{
+              background:
+                'radial-gradient(380px 220px at 15% 5%, rgba(110,143,102,0.25), transparent 70%)',
+            }}
+          />
           {images.map((src, i) => (
             <img
               key={src}

@@ -171,25 +171,54 @@
     }
   },
   
-"projects": {
-  "heading": "Utvalgte prosjekter",
-  "subtitle": "Et lite utvalg av jobber vi har utført for private og bedrifter.",
-  "viewAria": "Se mer om prosjektet {{title}}",
-  "close": "Lukk",
-  "titles": {
-    "flakstad-skole": "Flakstad Skole",
-    "batsfjord-skole": "Båtsfjord Skole"
-  },
-  "details": {
-    "flakstad-skole": {
-      "description": "Bilder fra prosjektet Flakstad Skole."
+  "projects": {
+    "heading": "Utvalgte prosjekter",
+    "subtitle": "Et lite utvalg av jobber vi har utført for private og bedrifter.",
+    "viewAria": "Se mer om prosjektet {{title}}",
+    "close": "Lukk",
+    "titles": {
+      "flakstad-skole": "Flakstad Skole",
+      "batsfjord-skole": "Båtsfjord Skole"
     },
-    "batsfjord-skole": {
-      "description": "Bilder fra prosjektet Båtsfjord Skole."
+    "details": {
+      "flakstad-skole": {
+        "description": "Bilder fra prosjektet Flakstad Skole."
+      },
+      "batsfjord-skole": {
+        "description": "Bilder fra prosjektet Båtsfjord Skole."
+      }
+    }
+  },
+  "process": {
+    "title": "Prosess",
+    "lead": "Klar og forutsigbar prosess fra første kontakt til ferdig leveranse.",
+    "promise": "Gratis befaring – svar innen 24t.",
+    "local": "Vi jobber i Tromsø og nærområdet.",
+    "more": "Vis mer",
+    "less": "Skjul",
+    "steps": {
+      "befaring": {
+        "title": "Befaring",
+        "summary": "Gratis befaring og behovsavklaring."
+      },
+      "tilbud": {
+        "title": "Tilbud",
+        "summary": "Du får et tydelig prisoverslag.",
+        "details": "Vi forklarer hva som er inkludert og foreslår gode alternativer."
+      },
+      "planlegging": {
+        "title": "Planlegging",
+        "summary": "Vi avtaler tidsplan og materialer."
+      },
+      "utforelse": {
+        "title": "Utførelse",
+        "summary": "Ryddig arbeid og løpende oppdateringer.",
+        "details": "Kontaktpunkt gjennom hele prosessen og tydelige milepæler."
+      },
+      "ferdigstillelse": {
+        "title": "Ferdigstillelse",
+        "summary": "Kontroll og trygg overlevering."
+      }
     }
   }
-}
-
-  
-
 }

@@ -3,6 +3,8 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Offer from '@/components/Offer'
 import Projects from '@/components/Projects'
+import Process from '@/components/Process'
+import ChatWidget from '@/components/ChatWidget'
 import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import CookieConsent from '@/components/CookieConsent'
@@ -85,6 +87,7 @@ export default function App() {
         <section id="start" className="scroll-mt-24">
           <Hero />
         </section>
+        <Process />
         <section id="oferta" className="scroll-mt-24">
           <Offer />
         </section>
@@ -97,6 +100,7 @@ export default function App() {
       </main>
       <Footer />
       <CookieConsent />
+      <ChatWidget />
     </div>
   );
 }
