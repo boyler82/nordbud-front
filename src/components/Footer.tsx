@@ -25,7 +25,13 @@ export default function Footer() {
               decoding="async"
             />
           </a>
-          <a href="#" aria-label="Instagram" className="inline-flex h-14 w-14 items-center justify-center rounded-full border transition hover:bg-gray-50 hover:scale-105">
+          <a
+            href="https://www.instagram.com/valheimbygg.po.st2555/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-full border transition hover:bg-gray-50 hover:scale-105"
+          >
             <img
               src="https://api.iconify.design/simple-icons/instagram.svg?color=%23E4405F"
               alt=""
@@ -34,7 +40,13 @@ export default function Footer() {
               decoding="async"
             />
           </a>
-          <a href="#" aria-label="X" className="inline-flex h-14 w-14 items-center justify-center rounded-full border transition hover:bg-gray-50 hover:scale-105">
+          <a
+            href="https://x.com/valheimbyg35639"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-full border transition hover:bg-gray-50 hover:scale-105"
+          >
             <img
               src="https://api.iconify.design/simple-icons/x.svg?color=%23000000"
               alt=""
@@ -43,7 +55,13 @@ export default function Footer() {
               decoding="async"
             />
           </a>
-          <a href="#" aria-label="LinkedIn" className="inline-flex h-14 w-14 items-center justify-center rounded-full border transition hover:bg-gray-50 hover:scale-105">
+          <a
+            href="https://www.linkedin.com/in/valheimbygg-as-7734bb3ab"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="inline-flex h-14 w-14 items-center justify-center rounded-full border transition hover:bg-gray-50 hover:scale-105"
+          >
             <img
               src="https://api.iconify.design/simple-icons/linkedin.svg?color=%230A66C2"
               alt=""
